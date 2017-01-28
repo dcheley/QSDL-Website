@@ -1,3 +1,4 @@
 tmp/*
 *.log
 .DS-Store
+/test
