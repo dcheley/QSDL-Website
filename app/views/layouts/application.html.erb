@@ -13,29 +13,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
-  <nav>
-  <div class="nav-wrapper">
-    <div class="container">
-      <a href="/pages/home" class="brand-logo">QSDL</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/pages/home">Home</a></li>
-        <li><a href="/pages/join">Join The League</a></li>
-        <li><a href="/teams/index">Team & Player Stats</a></li>
-        <li><a href="/bars/index">Sponsored Bars</a></li>
-        <li><a href="/pages/downloads">Downloads</a></li>
-        <li><a href="/pages/contact">Contact Us</a></li>
-      </ul>
-    </div>
-  </div>
-  </nav>
-
   <body>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-<div class="container center-align">
-    <%= yield %>
-</div>
+
+    <nav>
+    <div class="nav-wrapper">
+      <%= link_to image_tag("qsdl-logo.png"), "/pages/home", class:"brand-logo" %>
+      <div class="container">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/pages/home">HOME</a></li>
+          <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
+          <li><a href="/teams/index">TEAM & PLAYER STATS</a></li>
+          <li><a href="/bars/index">SPONSORED BARS</a></li>
+          <li><a href="/pages/downloads">DOWNLOADS</a></li>
+          <li><a href="/pages/contact">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+    <div class="container center-align">
+      <%= yield %>
+    </div>
+    
     <footer class="page-footer blue-grey lighten-2">
       <div class="container">
         <div class="row">
