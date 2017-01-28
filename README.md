@@ -1,24 +1,9 @@
-# # QSDL Website README
+# # QSDL Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* A simple website built to display information about Toronto's Queen Street Dart League. Several static pages are used through a pages controller.
 
-Things you may want to cover:
+* Able to create/update info about Teams and Bars.
 
-* Ruby version
+* Contains several links to QSDL social media and statistics sites.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Styled with Materialize and CSS
