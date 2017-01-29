@@ -3,6 +3,7 @@
 <p><%= link_to "League Stats (All Divisions)", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php" %></p>
 <p><%= link_to "Individual Stats", "http://www.yourleaguestats.com/darts/qsdl/league-stats.php" %></p>
 
+<!-- Loop through team names and urls by division for specefic team stats links -->
 <h4>Division A</h4>
   <ul>
   <% @teams.where(division: "A").each do |t| %>
@@ -26,5 +27,4 @@
 <% @teams.where(division: "C").each do |t| %>
   <li><%= link_to "#{t.name}", "#{t.url}" %></li>
 <% end %>
-</ul>
-<!-- Loop through team names and urls by division for specefic team stats links -->
+</ul></br>
