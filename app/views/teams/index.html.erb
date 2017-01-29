@@ -4,7 +4,27 @@
 <p><%= link_to "Individual Stats", "http://www.yourleaguestats.com/darts/qsdl/league-stats.php" %></p>
 
 <h4>Division A</h4>
+  <ul>
+  <% @teams.where(division: "A").each do |t| %>
+    <li><%= link_to "#{t.name}", "#{t.url}" %></li>
+  <% end %>
+  </ul>
 <h4>Division B1</h4>
+<ul>
+<% @teams.where(division: "B1").each do |t| %>
+  <li><%= link_to "#{t.name}", "#{t.url}" %></li>
+<% end %>
+</ul>
 <h4>Division B2</h4>
+<ul>
+<% @teams.where(division: "B2").each do |t| %>
+  <li><%= link_to "#{t.name}", "#{t.url}" %></li>
+<% end %>
+</ul>
 <h4>Division C</h4>
+<ul>
+<% @teams.where(division: "C").each do |t| %>
+  <li><%= link_to "#{t.name}", "#{t.url}" %></li>
+<% end %>
+</ul>
 <!-- Loop through team names and urls by division for specefic team stats links -->
