@@ -5,7 +5,7 @@
   <p><%= b.address %></p>
   <p><%= b.phone %></p>
   <% if b.url != "N/A"%>
-    <p><%= link_to "#{b.url}", "#{b.url}" %></p>
+    <p><%= link_to "#{b.url}", "#{b.url}", target: '_blank' %></p>
   <% else %>
     <p><%= "#{b.url}" %></p>
   <% end %>
