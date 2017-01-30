@@ -1,5 +1,6 @@
 //= require jquery
 //= require materialize
+
 $(document).ready(function() {
-  $(".button-collapse").sideNav();
+  $('.button-collapse').sideNav();
 });

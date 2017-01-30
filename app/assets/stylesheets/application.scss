@@ -14,6 +14,8 @@
  *= require_self
  */
 @import "materialize";
+@import "materialize/components/collapsible";
+
 .nav-wrapper {
   background-color: #546e7a;
 }
