@@ -1,28 +1,28 @@
-<h1>Team & Player Stats</h1>
+<h3>Team & Player Stats</h3>
 
 <p><%= link_to "League Stats (All Divisions)", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php" %></p>
 <p><%= link_to "Individual Stats", "http://www.yourleaguestats.com/darts/qsdl/league-stats.php" %></p>
 
 <!-- Loop through team names and urls by division for specefic team stats links -->
-<h4>Division A</h4>
+<h5>Division A</h5>
   <ul>
   <% @teams.where(division: "A").each do |t| %>
     <li><%= link_to "#{t.name}", "#{t.url}" %></li>
   <% end %>
   </ul>
-<h4>Division B1</h4>
+<h5>Division B1</h5>
 <ul>
 <% @teams.where(division: "B1").each do |t| %>
   <li><%= link_to "#{t.name}", "#{t.url}" %></li>
 <% end %>
 </ul>
-<h4>Division B2</h4>
+<h5>Division B2</h5>
 <ul>
 <% @teams.where(division: "B2").each do |t| %>
   <li><%= link_to "#{t.name}", "#{t.url}" %></li>
 <% end %>
 </ul>
-<h4>Division C</h4>
+<h5>Division C</h5>
 <ul>
 <% @teams.where(division: "C").each do |t| %>
   <li><%= link_to "#{t.name}", "#{t.url}" %></li>
