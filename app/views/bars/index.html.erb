@@ -1,9 +1,13 @@
 <h3>Sponsored Bars:</h3>
 
 <% @bars.each do |b| %>
-  <p><%= b.name %></p>
+  <p><b><%= b.name %></b></p>
   <p><%= b.address %></p>
   <p><%= b.phone %></p>
-  <p><%= link_to "#{b.url}", "#{b.url}" %></p>
+  <% if b.url != "N/A"%>
+    <p><%= link_to "#{b.url}", "#{b.url}" %></p>
+  <% else %>
+    <p><%= "#{b.url}" %></p>
+  <% end %>
 <% end %>
 <!-- loop through all bars USE PAPERCLIP FOR PHOTO UPLOAD https://rubygems.org/gems/paperclip -->
