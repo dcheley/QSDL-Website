@@ -11,7 +11,7 @@ $(document).ready(function() {
     hover: true, // Activate on hover
     gutter: 0, // Spacing from edge
     belowOrigin: true, // Displays dropdown below the button
-    alignment: 'right', // Displays dropdown with edge aligned to the left of button
+    alignment: 'right', // Displays dropdown with edge aligned to the right of button
     stopPropagation: false // Stops event propagation
   });
 });
