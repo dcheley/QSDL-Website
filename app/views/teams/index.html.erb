@@ -1,31 +1,33 @@
-<h3>Team & Player Stats</h3>
+<div class="container">
+  <h3>Team & Player Stats</h3>
 
-<p><%= link_to "League Team Stats (All Divisions)", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></p>
-<p><%= link_to "League Individual Stats (All Division)", "http://www.yourleaguestats.com/darts/qsdl/league-stats.php", target: '_blank' %></p>
+  <p><%= link_to "League Team Stats (All Divisions)", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></p>
+  <p><%= link_to "League Individual Stats (All Division)", "http://www.yourleaguestats.com/darts/qsdl/league-stats.php", target: '_blank' %></p>
 
-<!-- Loop through team names and urls by division for specefic team stats links -->
-<h5>Division A</h5>
-<ul>
-<% @teams.where(division: "A").each do |t| %>
-  <li><%= link_to "#{t.name}", "#{t.url}", target: '_blank' %></li>
-<% end %>
-</ul>
+  <!-- Loop through team names and urls by division for specefic team stats links -->
+  <h5>Division A</h5>
+  <ul>
+  <% @teams.where(division: "A").each do |t| %>
+    <li><%= link_to "#{t.name}", "#{t.url}", target: '_blank' %></li>
+  <% end %>
+  </ul>
 
-<h5>Division B1</h5>
-<ul>
-<% @teams.where(division: "B1").each do |t| %>
-  <li><%= link_to "#{t.name}", "#{t.url}", target: '_blank' %></li>
-<% end %>
-</ul>
-<h5>Division B2</h5>
-<ul>
-<% @teams.where(division: "B2").each do |t| %>
-  <li><%= link_to "#{t.name}", "#{t.url}", target: '_blank' %></li>
-<% end %>
-</ul>
-<h5>Division C</h5>
-<ul>
-<% @teams.where(division: "C").each do |t| %>
-  <li><%= link_to "#{t.name}", "#{t.url}", target: '_blank' %></li>
-<% end %>
-</ul></br>
+  <h5>Division B1</h5>
+  <ul>
+  <% @teams.where(division: "B1").each do |t| %>
+    <li><%= link_to "#{t.name}", "#{t.url}", target: '_blank' %></li>
+  <% end %>
+  </ul>
+  <h5>Division B2</h5>
+  <ul>
+  <% @teams.where(division: "B2").each do |t| %>
+    <li><%= link_to "#{t.name}", "#{t.url}", target: '_blank' %></li>
+  <% end %>
+  </ul>
+  <h5>Division C</h5>
+  <ul>
+  <% @teams.where(division: "C").each do |t| %>
+    <li><%= link_to "#{t.name}", "#{t.url}", target: '_blank' %></li>
+  <% end %>
+  </ul></br>
+</div>

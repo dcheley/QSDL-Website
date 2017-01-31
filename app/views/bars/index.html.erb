@@ -1,20 +1,22 @@
-<h5>Sponsored Bars</h5>
-<% @bars.each do |b| %>
-  <div class="row">
-    <div class="col s12 m12 l12">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-        <span class="card-title"><h2><b><%= b.name %></b></h2></span>
-        <% if b.url != "N/A"%>
-          <p><%= link_to "#{b.url}", "#{b.url}", target: '_blank' %></p>
-        <% else %>
-          <p><%= b.url %></p>
-        <% end %>
-          <p><%= b.address %></p>
-          <p><%= b.phone %></p>
+<div class="container">
+  <h5>Sponsored Bars</h5>
+  <% @bars.each do |b| %>
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+          <span class="card-title"><h2><b><%= b.name %></b></h2></span>
+          <% if b.url != "N/A"%>
+            <p><%= link_to "#{b.url}", "#{b.url}", target: '_blank' %></p>
+          <% else %>
+            <p><%= b.url %></p>
+          <% end %>
+            <p><%= b.address %></p>
+            <p><%= b.phone %></p>
+          </div>
         </div>
-      </div>
+    </div>
   </div>
-</div>
 <% end %>
+</div>
 <!-- loop through all bars USE PAPERCLIP FOR PHOTO UPLOAD https://rubygems.org/gems/paperclip -->
