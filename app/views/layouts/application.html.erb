@@ -21,8 +21,8 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id ="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/">HOME</a></li>
-          <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
           <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
+          <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
           <li><a href="/teams/index">TEAM & PLAYER STATS</a></li>
           <li><a href="/bars/index">SPONSORED BARS</a></li>
           <li><a href="/pages/downloads">DOWNLOADS</a></li>
@@ -34,11 +34,15 @@
           <li class="divider"></li>
           <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
           <li class="divider"></li>
+          <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
+          <li class="divider"></li>
           <li><a href="/teams/index">TEAM & PLAYER STATS</a></li>
           <li class="divider"></li>
           <li><a href="/bars/index">SPONSORED BARS</a></li>
           <li class="divider"></li>
           <li><a href="/pages/downloads">DOWNLOADS</a></li>
+          <li class="divider"></li>
+          <li><%= link_to "NEWS", "http://www.yourleaguestats.com/darts/qsdl/league-news.php", target: '_blank' %></li>
           <li class="divider"></li>
           <li><a href="/pages/contact">CONTACT US</a></li>
           <li class="divider"></li>
@@ -48,7 +52,7 @@
 
       <%= yield %>
     <li class="divider"></li>
-    
+
     <footer class="page-footer white">
       <div class="container">
         <div class="row">
