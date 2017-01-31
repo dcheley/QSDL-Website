@@ -16,10 +16,27 @@
 @import "materialize";
 @import "materialize/components/collapsible";
 
+* {
+
+}
+
 .nav-wrapper {
   background-color: #546e7a;
 }
 
+.nav-wrapper a {
+  color: #e0e0e0;
+}
 nav .brand-logo img {
     height: 64px;
+}
+
+.card-content p {
+  text-align: right;
+}
+
+.card-content a, {
+  color: #e0e0e0;
+  font-weight: bold;
+  font-style: italic;
 }
