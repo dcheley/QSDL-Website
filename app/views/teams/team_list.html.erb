@@ -3,4 +3,6 @@
   <% @teams.each do |t| %>
     <li><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %></li>
   <% end %>
+
+</br><%= link_to "Add Team", new_team_url %>
 </div>

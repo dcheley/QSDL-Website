@@ -1,4 +1,18 @@
 class BarsController < ApplicationController
+  def new
+    @bar = Bar.new
+  end
+
+  def create
+    @bar = Bar.new(bar_params)
+
+    if @bar.save
+      redirect_to "/teams/bar_list", notice: "#{@bar.name} created!"
+    else
+      render :new
+    end
+  end
+
   def index
     @bars = Bar.all.order("name ASC")
   end

@@ -1,4 +1,18 @@
 class TeamsController < ApplicationController
+  def new
+    @team = Team.new
+  end
+
+  def create
+    @team = Team.new(team_params)
+
+    if @team.save
+      redirect_to "/teams/team_list", notice: "#{@team.name} created!"
+    else
+      render :new
+    end
+  end
+
   def index
     @teams = Team.all.order("name ASC")
   end
