@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new', :as => :login
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy', :as => :logout
+  get "/teams/team_list" => "teams#team_list"
+  get "/bars/bar_list" => "bars#bar_list"
 end
