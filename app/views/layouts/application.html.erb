@@ -82,8 +82,8 @@
         <div class="container black-text">
         © 2017 Queen Street Dart League
         <% if current_user %>
-          <%= link_to "Manage Teams", "/", class:"black-text right" %>
-          <%= link_to "Manage Bars", "/", class:"black-text right" %>
+          <%= link_to "Manage Teams", "/teams/team_list", class:"black-text right" %>
+          <%= link_to "Manage Bars", "/bars/bar_list", class:"black-text right" %>
           <%= link_to "Logout", :logout, class:"black-text right" %>
         <% else %>
           <%= link_to "Login", :login, class:"black-text right" %>
