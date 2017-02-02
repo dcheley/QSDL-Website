@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:edit]
   resources :sessions, only: [:new, :destroy]
+
   get "/pages/*page" => "pages#show"
   get 'teams/index'
   get 'bars/index'
