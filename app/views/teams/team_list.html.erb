@@ -1,4 +1,5 @@
 <div class="container">
+  <h3>Manage Team Info</h3>
   <% @teams.each do |t| %>
     <li><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %></li>
   <% end %>

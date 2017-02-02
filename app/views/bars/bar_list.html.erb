@@ -1,5 +1,11 @@
 <div class="container">
+  <h3>Manage Bar Info</h3>
   <% @bars.each do |b| %>
     <li><%= link_to "#{b.name}", "/bars/#{b.id}/edit" %></li>
   <% end %>
 </div>
+
+<!-- ADD DELETE BUTTON
+ADD NEW FORM PLUS CREATE LOGIC
+STYLE FORMS PAGES AND FLASHES
+MAKE FIXED BUTTON FOR USER LINKS-->
