@@ -1,3 +1,5 @@
+User.create([{ email: 'test', password: [testing!]}])
+
 Team.create([{ name: 'Gravediggers', division: 'A', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=728" },
   { name: 'Dart Bags 1', division: 'A', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=434" },
   { name: 'Nomads', division: 'A', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=37" },
