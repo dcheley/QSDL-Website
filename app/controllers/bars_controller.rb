@@ -4,7 +4,7 @@ class BarsController < ApplicationController
   end
 
   def edit
-    @bar = bar.find(bar_params)
+    @bar = bar.find_by(bar_params)
   end
 
   private

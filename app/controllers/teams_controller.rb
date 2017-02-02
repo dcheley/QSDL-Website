@@ -4,7 +4,7 @@ class TeamsController < ApplicationController
   end
 
   def edit
-    @team = Team.find(team_params)
+    @team = Team.find_by(team_params)
   end
 
   private

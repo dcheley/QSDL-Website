@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def edit
-    @user = User.find(user_params)
+    @user = User.find_by(user_params)
   end
 
   private
