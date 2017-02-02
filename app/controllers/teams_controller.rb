@@ -4,7 +4,16 @@ class TeamsController < ApplicationController
   end
 
   def edit
-    @team = Team.find_by(team_params)
+    @team = Team.find(params[:id])
+  end
+
+  def update
+    @team = Team.find(params[:id])
+    if @team.update_attributes(team_params)
+      redirect_to root_url, notice: "Team updated!"
+    else
+      render :edit
+    end
   end
 
   private

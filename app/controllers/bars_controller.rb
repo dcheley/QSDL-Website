@@ -4,7 +4,16 @@ class BarsController < ApplicationController
   end
 
   def edit
-    @bar = bar.find_by(bar_params)
+    @bar = Bar.find(params[:id])
+  end
+
+  def update
+    @bar = Bar.find(params[:id])
+    if @bar.update_attributes(bar_params)
+      redirect_to root_url, notice: "Bar updated!"
+    else
+      render :edit
+    end
   end
 
   private
