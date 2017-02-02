@@ -1,4 +1,6 @@
-<%= form_for(@user, url: 'edit') do |f| %>
+<h3>Edit Settings</h3>
+
+<%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited change!</h2>
