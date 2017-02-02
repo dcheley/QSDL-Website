@@ -75,7 +75,7 @@
         <div class="container black-text">
         © 2017 Queen Street Dart League
         <% if session[:user_id] %>
-          Signed in! <%= @user.email %>. <%= link_to "Log out", session_path("current"), method: :delete %>
+          Signed in! <%= link_to "Log out", session_path("current"), class:"black-text right", method: :delete %>
         <% else %>
           <%= link_to "Log in", new_session_path, class:"black-text right" %>
         <% end %>
