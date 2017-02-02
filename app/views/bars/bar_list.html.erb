@@ -1,11 +1,12 @@
 <div class="container">
   <h3>Manage Bar Info</h3>
+
+  <%= link_to "Add Bar", new_bar_url %>
+
   <% @bars.each do |b| %>
-    <li><%= link_to "#{b.name}", "/bars/#{b.id}/edit" %> | <%= button_to "Delete", {controller: :bars,
+    <li><%= link_to "#{b.name}", "/bars/#{b.id}/edit" %> <%= button_to "Delete", {controller: :bars,
       action: 'destroy', id: b.id }, method: :delete %></li>
   <% end %>
-
-  </br><%= link_to "Add Bar", new_bar_url %>
 </div>
 
 <!--

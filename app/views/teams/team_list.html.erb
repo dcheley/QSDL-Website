@@ -1,9 +1,10 @@
 <div class="container">
   <h3>Manage Team Info</h3>
+
+  <%= link_to "Add Team", new_team_url %>
+
   <% @teams.each do |t| %>
-    <li><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %> | <%= button_to "Delete", {controller: :teams,
+    <li><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %> <%= button_to "Delete", {controller: :teams,
       action: 'destroy', id: t.id }, method: :delete %></li>
   <% end %>
-
-</br><%= link_to "Add Team", new_team_url %>
 </div>
