@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   root "pages#show", page: "home"
 
   resources :users, only: [:edit, :update]
-  resources :teams, only: [:index, :edit, :update, :new, :create]
-  resources :bars, only: [:index, :edit, :update, :new, :create]
+  resources :teams, only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :bars, only: [:index, :edit, :update, :new, :create, :destroy]
 
   get "/pages/*page" => "pages#show"
   get 'login' => 'sessions#new', :as => :login
