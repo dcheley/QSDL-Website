@@ -3,6 +3,10 @@ class TeamsController < ApplicationController
     @teams = Team.all.order("name ASC")
   end
 
+  def team_list
+    @teams = Team.all.order("name ASC")
+  end
+
   def edit
     @team = Team.find(params[:id])
   end

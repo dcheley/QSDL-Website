@@ -3,6 +3,10 @@ class BarsController < ApplicationController
     @bars = Bar.all.order("name ASC")
   end
 
+  def bar_list
+    @bars = Bar.all.order("name ASC")
+  end
+
   def edit
     @bar = Bar.find(params[:id])
   end
