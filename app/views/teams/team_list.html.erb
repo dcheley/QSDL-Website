@@ -1,3 +1,5 @@
-<% @teams.each do |t| %>
-  <li><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %></li>
-<% end %>
+<div class="container">
+  <% @teams.each do |t| %>
+    <li><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %></li>
+  <% end %>
+</div>
