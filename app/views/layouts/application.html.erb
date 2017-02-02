@@ -53,6 +53,13 @@
       <%= yield %>
     <li class="divider"></li>
 
+    <% if flash[:notice] %>
+      <p id="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p id="alert"><%= flash[:alert] %></p>
+    <% end %>
+
     <footer class="page-footer white">
       <div class="container">
         <div class="row">
@@ -74,10 +81,10 @@
       <div class="footer-copyright">
         <div class="container black-text">
         © 2017 Queen Street Dart League
-        <% if session[:user_id] %>
-          Signed in! <%= link_to "Log out", session_path("current"), class:"black-text right", method: :delete %>
+        <% if current_user %>
+          Signed in! <%= link_to "Logout", :logout, class:"black-text right" %>
         <% else %>
-          <%= link_to "Log in", new_session_path, class:"black-text right" %>
+          <%= link_to "Login", :login, class:"black-text right" %>
         <% end %>
         </div>
       </div>

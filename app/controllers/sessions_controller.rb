@@ -6,10 +6,10 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to edit_user_url, notice: "Logged in!"
+      redirect_to edit_user_url(user), notice: "Logged in!"
     else
       flash[:alert] = "Invalid email or password"
-      render "new"
+      render :new
     end
   end
 
