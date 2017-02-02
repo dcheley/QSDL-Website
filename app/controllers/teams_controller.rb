@@ -28,10 +28,16 @@ class TeamsController < ApplicationController
   def update
     @team = Team.find(params[:id])
     if @team.update_attributes(team_params)
-      redirect_to root_url, notice: "Team updated!"
+      redirect_to "/teams/team_list", notice: "Team updated!"
     else
       render :edit
     end
+  end
+
+  def destroy
+    @team = Team.find(params[:id])
+    @team.destroy
+    redirect_to "/teams/team_list", notice: "Team deleted!"
   end
 
   private
