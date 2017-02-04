@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'news/new'
+
+  get 'news/create'
+
+  get 'news/edit'
+
+  get 'news/update'
+
+  get 'news/destroy'
+
+  get 'news/index'
+
   root "pages#show", page: "home"
 
   resources :users, only: [:edit, :update]
