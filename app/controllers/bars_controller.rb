@@ -5,7 +5,6 @@ class BarsController < ApplicationController
 
   def create
     @bar = Bar.new(bar_params)
-
     if @bar.save
       redirect_to "/bars/bar_list", notice: "#{@bar.name} created!"
     else
