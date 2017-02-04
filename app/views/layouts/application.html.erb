@@ -26,7 +26,7 @@
           <li><a href="/teams">TEAM & PLAYER STATS</a></li>
           <li><a href="/bars">SPONSORED BARS</a></li>
           <li><a href="/pages/downloads">DOWNLOADS</a></li>
-          <li><%= link_to "NEWS", "http://www.yourleaguestats.com/darts/qsdl/league-news.php", target: '_blank' %></li>
+          <li><%= link_to "NEWS", :news_index %></li>
           <li><a href="/pages/contact">CONTACT US</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
@@ -56,7 +56,7 @@
     <% if flash[:alert] %>
       <p id="alert"><%= flash[:alert] %></p>
     <% end %>
-    
+
       <%= yield %>
     <li class="divider"></li>
 
