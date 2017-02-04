@@ -3,5 +3,10 @@
   <% @news.each do |article| %>
     <%= article.title %></br>
     <%= article.content %>
+    <% if current_user %>
+      <%= link_to "Edit", "/news/#{article.id}/edit"%>
+      <%= button_to "Delete", {controller: :news,
+        action: 'destroy', id: article.id }, method: :delete %>
+    <% end %>
   <% end %>
 </div></br>

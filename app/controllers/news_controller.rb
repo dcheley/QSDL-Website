@@ -28,7 +28,7 @@ class NewsController < ApplicationController
   def destroy
     @new = News.find(params[:id])
     @new.destroy
-    redirect_to "news#index", notice: "Article deleted!"
+    redirect_to root_path, notice: "Article deleted!"
   end
 
   def index

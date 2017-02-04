@@ -1,3 +1,4 @@
+<% if current_user %>
 <div class="container">
   <h3>Manage Bar Info</h3>
 
@@ -7,8 +8,12 @@
     <li><%= link_to "#{b.name}", "/bars/#{b.id}/edit" %> <%= button_to "Delete", {controller: :bars,
       action: 'destroy', id: b.id }, method: :delete %></li>
   <% end %>
-</div>
 
+<% else %>
+<div class="container">
+  <h3>Unauthorized!</h3>
+<% end %>
+</div>
 <!--
 Popper's Pub near Bathurst/bloor
 add images paper clip
