@@ -1,5 +1,7 @@
-<h3>News</h3>
-<% @news.each do |article| %>
-  <%= article.title %>
-  <%= article.content %>
-<% end %>
+<div class="container">
+  <h3>News</h3>
+  <% @news.each do |article| %>
+    <%= article.title %></br>
+    <%= article.content %>
+  <% end %>
+</div>
