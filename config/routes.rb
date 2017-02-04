@@ -1,21 +1,10 @@
 Rails.application.routes.draw do
-  get 'news/new'
-
-  get 'news/create'
-
-  get 'news/edit'
-
-  get 'news/update'
-
-  get 'news/destroy'
-
-  get 'news/index'
-
   root "pages#show", page: "home"
 
   resources :users, only: [:edit, :update]
-  resources :teams, only: [:index, :edit, :update, :new, :create, :destroy]
-  resources :bars, only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :teams
+  resources :bars
+  resources :news
 
   get "/pages/*page" => "pages#show"
   get 'login' => 'sessions#new', as: :login

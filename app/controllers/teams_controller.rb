@@ -5,7 +5,6 @@ class TeamsController < ApplicationController
 
   def create
     @team = Team.new(team_params)
-
     if @team.save
       redirect_to "/teams/team_list", notice: "#{@team.name} created!"
     else
