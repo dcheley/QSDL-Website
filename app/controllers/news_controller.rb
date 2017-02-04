@@ -6,7 +6,7 @@ class NewsController < ApplicationController
   def create
     @new = News.new(news_params)
     if @new.save
-      redirect_to "/news/index", notice: "Article added!"
+      redirect_to :news_index, notice: "Article added!"
     else
       render :new
     end
@@ -19,7 +19,7 @@ class NewsController < ApplicationController
   def update
     @new = News.find(params[:id])
     if @new.update_attributes(news_params)
-      redirect_to "/news/index", notice: "Article updated!"
+      redirect_to :news_index, notice: "Article updated!"
     else
       render :edit
     end
@@ -28,10 +28,11 @@ class NewsController < ApplicationController
   def destroy
     @new = News.find(params[:id])
     @new.destroy
-    redirect_to "/news/index", notice: "Article deleted!"
+    redirect_to "news#index", notice: "Article deleted!"
   end
 
   def index
+    @news = News.all.order("name ASC")
   end
 
   private
