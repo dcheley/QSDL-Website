@@ -1,11 +1,11 @@
 class NewsController < ApplicationController
   def new
-    @news = News.new
+    @new = News.new
   end
 
   def create
-    @news = News.new(news_params)
-    if @news.save
+    @new = News.new(news_params)
+    if @new.save
       redirect_to "/news/index", notice: "Article added!"
     else
       render :new
@@ -13,12 +13,12 @@ class NewsController < ApplicationController
   end
 
   def edit
-    @news = News.find(params[:id])
+    @new = News.find(params[:id])
   end
 
   def update
-    @news = News.find(params[:id])
-    if @news.update_attributes(news_params)
+    @new = News.find(params[:id])
+    if @new.update_attributes(news_params)
       redirect_to "/news/index", notice: "Article updated!"
     else
       render :edit
@@ -26,8 +26,8 @@ class NewsController < ApplicationController
   end
 
   def destroy
-    @news = News.find(params[:id])
-    @news.destroy
+    @new = News.find(params[:id])
+    @new.destroy
     redirect_to "/news/index", notice: "Article deleted!"
   end
 
@@ -36,6 +36,6 @@ class NewsController < ApplicationController
 
   private
   def news_params
-    params.require(:news).permit(:title, :content)
+    params.require(:new).permit(:title, :content)
   end
 end
