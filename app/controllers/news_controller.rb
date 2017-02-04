@@ -32,7 +32,7 @@ class NewsController < ApplicationController
   end
 
   def index
-    @news = News.all.order("name ASC")
+    @news = News.all.order("title ASC")
   end
 
   private
