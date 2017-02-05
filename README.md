@@ -1,11 +1,15 @@
 # QSDL Website
 
-A simple website built to display information about Toronto's Queen Street Dart League.
+A website built to display information about Toronto's Queen Street Dart League.
 
-* Contains several static pages rendered through a pages controller.
+* Responsive design through Materialize and CSS (including dropdowns, side-nav and scrollspy).
 
-* Able to create/update info about Teams and Bars.
+* Admin able to login and create/update/delete info about Teams, Bars and News Articles.
 
-* Contains several links to QSDL social media and statistics sites.
+* Paperclip gem allows admin to upload a picture for each Bar (displayed on the bars#index view).
 
-* Styled with Materialize and CSS
+* Private navbar displaying extra tabs for backend links.
+
+* Several static pages rendered through a pages controller.
+
+* Links to QSDL social media and statistics sites.
