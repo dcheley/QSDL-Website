@@ -21,7 +21,7 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id ="nav-mobile" class="right hide-on-med-and-down">
           <% if current_user %>
-            <li><%= link_to "Management", "/users/#{session[:user_id]}/edit", class:"black-text right"%></li>
+            <li><%= link_to "CONTENT", "/users/#{session[:user_id]}/edit" %></li>
           <% end %>
           <li><a href="/">HOME</a></li>
           <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
