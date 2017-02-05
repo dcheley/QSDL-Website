@@ -2,15 +2,18 @@
 <div class="container">
   <h3>Manage Team Info</h3>
 
-  <%= link_to "Add Team", new_team_url %>
+  <p><%= link_to "ADD TEAM", new_team_url %></p>
+
+  <li class="divider"></li>
 
   <% @teams.each do |t| %>
-    <li><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %> <%= button_to "Delete", {controller: :teams,
-      action: 'destroy', id: t.id }, method: :delete %></li>
+    <li class="backend-list"><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %> <%= button_to "Delete", {controller: :teams,
+      action: 'destroy', id: t.id }, method: :delete %></li></br>
+    <li class="divider"></li>
   <% end %>
 
 <% else %>
 <div class="container">
   <h3>Unauthorized!</h3>
 <% end %>
-</div>
+</div></br>

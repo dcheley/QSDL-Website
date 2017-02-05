@@ -7,7 +7,7 @@
   <li class="divider"></li>
 
   <% @news.each do |article| %>
-    <li class="article"><%= link_to "#{article.title}", "/news/#{article.id}/edit"%></li>
+    <li class="backend-list"><%= link_to "#{article.title}", "/news/#{article.id}/edit"%></li>
     <%= article.content %>
     <%= button_to "Delete", {controller: :news,
       action: 'destroy', id: article.id }, method: :delete %>

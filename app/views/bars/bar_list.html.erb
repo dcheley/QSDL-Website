@@ -2,18 +2,19 @@
 <div class="container">
   <h3>Manage Bar Info</h3>
 
-  <%= link_to "Add Bar", new_bar_url %>
+  <p><%= link_to "ADD BAR", new_bar_url %></p>
 
   <% @bars.each do |b| %>
-    <li><%= link_to "#{b.name}", "/bars/#{b.id}/edit" %> <%= button_to "Delete", {controller: :bars,
-      action: 'destroy', id: b.id }, method: :delete %></li>
+    <li class="backend-list"><%= link_to "#{b.name}", "/bars/#{b.id}/edit" %> <%= button_to "Delete", {controller: :bars,
+      action: 'destroy', id: b.id }, method: :delete %></li></br>
+    <li class="divider"></li>
   <% end %>
 
 <% else %>
 <div class="container">
   <h3>Unauthorized!</h3>
 <% end %>
-</div>
+</div></br>
 <!--
 Popper's Pub near Bathurst/bloor
 add images paper clip
