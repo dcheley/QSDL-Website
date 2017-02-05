@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <% if !current_user %>
     <div class="parallax-container">
       <div class="parallax"><%= image_tag('bg.png') %></div>
     </div>
+    <% else %>
+    <div class="container center">
+      <h4>PICTURE NOT VIEWABLE WHILE LOGGED IN</h4>
+    </div>
+    <% end %>
   </body>
 </html>
