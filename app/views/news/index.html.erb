@@ -4,6 +4,7 @@
   <% @news.each do |article| %>
     <h4><%= article.title %></h4>
     <p class="article-content"><%= article.content %><p>
+      <%= article.updated_at.strftime("%a, %B %d, %Y") %>
     <li class="divider"></li>
   <% end %>
 </div></br>
