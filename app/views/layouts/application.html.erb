@@ -20,6 +20,9 @@
       <%= link_to image_tag("logo.png"), "/", class:"brand-logo" %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id ="nav-mobile" class="right hide-on-med-and-down">
+          <% if current_user %>
+            <li><%= link_to "Management", "/users/#{session[:user_id]}/edit", class:"black-text right"%></li>
+          <% end %>
           <li><a href="/">HOME</a></li>
           <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
           <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
@@ -57,7 +60,8 @@
       <p id="alert"><%= flash[:alert] %></p>
     <% end %>
 
-      <%= yield %>
+    <%= yield %>
+
     <li class="divider"></li>
 
     <footer class="page-footer white">
@@ -82,9 +86,7 @@
         <div class="container black-text">
         © 2017 Queen Street Dart League
         <% if current_user %>
-          <%= link_to "Manage Teams", "/teams/team_list", class:"black-text right" %>
-          <%= link_to "Manage Bars--", "/bars/bar_list", class:"black-text right" %>
-          <%= link_to "Logout--", :logout, class:"black-text right" %>
+          <%= link_to "Logout", :logout, class:"black-text right" %>
         <% else %>
           <%= link_to "Login", :login, class:"black-text right" %>
         <% end %>
