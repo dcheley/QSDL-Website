@@ -8,7 +8,7 @@
     <li><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %> <%= button_to "Delete", {controller: :teams,
       action: 'destroy', id: t.id }, method: :delete %></li>
   <% end %>
-  
+
 <% else %>
 <div class="container">
   <h3>Unauthorized!</h3>
