@@ -20,9 +20,9 @@
       <%= link_to image_tag("logo.png"), "/", class:"brand-logo" %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id ="nav-mobile" class="right hide-on-med-and-down">
-          <% if current_user %>
-            <li><%= link_to "CONTENT", "/users/#{session[:user_id]}/edit" %></li>
-          <% end %>
+        <% if current_user %>
+          <li><%= link_to "CONTENT", "/users/#{session[:user_id]}/edit" %></li>
+        <% end %>
           <li><a href="/">HOME</a></li>
           <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
           <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
@@ -33,6 +33,10 @@
           <li><a href="/pages/contact">CONTACT US</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
+        <% if current_user %>
+          <li><%= link_to "CONTENT", "/users/#{session[:user_id]}/edit" %></li>
+          <li class="divider"></li>
+        <% end %>
           <li><a href="/pages/home">HOME</a></li>
           <li class="divider"></li>
           <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
