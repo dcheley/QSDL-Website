@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy', as: :logout
   get "/teams/team_list" => "teams#team_list"
   get "/bars/bar_list" => "bars#bar_list"
+  get "/news/news_list" => "news#news_list"
   get 'delete_team' => "teams#destroy", as: :delete_team
 end
