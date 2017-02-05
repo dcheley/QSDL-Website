@@ -1,0 +1,35 @@
+<nav>
+  <div class="nav-wrapper">
+    <!-- <a href="/" class="brand-logo left"><%= image_tag "logo.png", class: "logo" %></a> -->
+    <%= link_to image_tag("logo.png"), "/", class:"brand-logo" %>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id ="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/">HOME</a></li>
+      <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
+      <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
+      <li><a href="/teams">TEAM & PLAYER STATS</a></li>
+      <li><a href="/bars">SPONSORED BARS</a></li>
+      <li><a href="/pages/downloads">DOWNLOADS</a></li>
+      <li><%= link_to "NEWS", :news_index %></li>
+      <li><a href="/pages/contact">CONTACT US</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><a href="/pages/home">HOME</a></li>
+      <li class="divider"></li>
+      <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
+      <li class="divider"></li>
+      <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
+      <li class="divider"></li>
+      <li><a href="/teams">TEAM & PLAYER STATS</a></li>
+      <li class="divider"></li>
+      <li><a href="/bars">SPONSORED BARS</a></li>
+      <li class="divider"></li>
+      <li><a href="/pages/downloads">DOWNLOADS</a></li>
+      <li class="divider"></li>
+      <li><%= link_to "NEWS", "http://www.yourleaguestats.com/darts/qsdl/league-news.php", target: '_blank' %></li>
+      <li class="divider"></li>
+      <li><a href="/pages/contact">CONTACT US</a></li>
+      <li class="divider"></li>
+    </ul>
+  </div>
+</nav>

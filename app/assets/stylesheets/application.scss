@@ -16,13 +16,17 @@
 @import "materialize";
 // @import "materialize/components/collapsible";
 
-.nav-wrapper {
+.nav-extended, .nav-wrapper {
   background-color: #546e7a;
 }
 
 .nav-wrapper a {
   color: #e0e0e0;
   font-weight: bold;
+}
+
+.tabs.tabs-transparent {
+  background-color: #b0bec5;
 }
 
 nav .brand-logo img {
