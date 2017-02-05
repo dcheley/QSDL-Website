@@ -7,8 +7,9 @@
   <li class="divider"></li>
 
   <% @teams.each do |t| %>
-    <li class="backend-list"><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %> <%= button_to "Delete", {controller: :teams,
-      action: 'destroy', id: t.id }, method: :delete %></li></br>
+    <li class="backend-list"><%= link_to "#{t.name}", "/teams/#{t.id}/edit" %></li>
+    <p><b>Updated:</b> <%= t.updated_at.strftime("%a, %B %d, %Y") %></p>
+    <%= button_to "Delete", {controller: :teams, action: 'destroy', id: t.id }, method: :delete %></br>
     <li class="divider"></li>
   <% end %>
 

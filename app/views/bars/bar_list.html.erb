@@ -4,9 +4,12 @@
 
   <p><%= link_to "ADD BAR", new_bar_url %></p>
 
+  <li class="divider"></li>
+  
   <% @bars.each do |b| %>
-    <li class="backend-list"><%= link_to "#{b.name}", "/bars/#{b.id}/edit" %> <%= button_to "Delete", {controller: :bars,
-      action: 'destroy', id: b.id }, method: :delete %></li></br>
+    <li class="backend-list"><%= link_to "#{b.name}", "/bars/#{b.id}/edit" %></li>
+    <p><b>Updated:</b> <%= b.updated_at.strftime("%a, %B %d, %Y") %></p>
+    <%= button_to "Delete", {controller: :bars, action: 'destroy', id: b.id }, method: :delete %></br>
     <li class="divider"></li>
   <% end %>
 
