@@ -1,6 +1,8 @@
 <% if current_user %>
 <div class="container">
-  <h3>Manage News Articles</h3>
+  <div id="news-top" class="section scrollspy">
+    <h3>Manage News Articles</h3>
+  </div>
 
   <p><%= link_to "ADD ARTICLE", new_news_url %></p>
 
@@ -13,6 +15,10 @@
     <%= button_to "Delete", {controller: :news, action: 'destroy', id: article.id }, method: :delete %>
     </br><li class="divider"></li>
   <% end %>
+
+  <div class="fixed-action-btn">
+    <%= link_to "TOP", "#news-top", class:"btn-floating btn-large blue-grey darken-3 white-text" %>
+  </div>
 
 <% else %>
 <div class="container">
