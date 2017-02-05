@@ -35,6 +35,10 @@ class NewsController < ApplicationController
     @news = News.all.order("title ASC")
   end
 
+  def news_list
+    @news = News.all.order("title ASC")
+  end
+
   private
   def news_params
     params.require(:news).permit(:title, :content)
