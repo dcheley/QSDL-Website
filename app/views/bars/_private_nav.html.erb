@@ -42,7 +42,9 @@
     </ul>
   </div>
 </nav>
-<div id="news" class="col s12"><a href="/news/news_list">NEWS</div>
-<div id="teams" class="col s12"><a href="/teams/team_list">TEAMS</div>
-<div id="bars" class="col s12"><a href="/bars/bar_list">BARS</div>
-<div id="account" class="col s12"><%= link_to "ACCOUNT", "/users/#{session[:user_id]}/edit" %></div>
+<div class="container center">
+  <div id="news" class="col s12"><%= link_to "NEWS", "/news/news_list", class:"waves-effect waves-light btn blue-grey darken-4" %></div>
+  <div id="teams" class="col s12"><%= link_to "TEAMS", "/teams/team_list", class:"waves-effect waves-light btn blue-grey darken-4" %></div>
+  <div id="bars" class="col s12"><%= link_to "BARS", "/bars/bar_list", class:"waves-effect waves-light btn blue-grey darken-4" %></div>
+  <div id="account" class="col s12"><%= link_to "ACCOUNT", "/users/#{session[:user_id]}/edit", class:"waves-effect waves-light btn blue-grey darken-4" %></div>
+</div>
