@@ -4,6 +4,7 @@
   <p><%= link_to "League Team Stats (All Divisions)", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></p>
   <p><%= link_to "League Individual Stats (All Divisions)", "http://www.yourleaguestats.com/darts/qsdl/league-stats.php", target: '_blank' %></p>
 
+  <% if !current_user %>
   <!-- Loop through team names and urls by division for specefic team stats links -->
 
   <!-- Dropdown Trigger -->
@@ -38,4 +39,8 @@
     <li><%= link_to "#{t.name}", "#{t.url}", target: '_blank' %></li>
   <% end %>
   </ul>
+
+  <% else %>
+    <h4>Logout to view Individual Team Stat links</h4>
+  <% end %>
 </div></br>
