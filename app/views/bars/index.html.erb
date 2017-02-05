@@ -1,37 +1,37 @@
 <div class="container">
-    <div class="row">
-      <div class="col s12 m9 l9">
-        <div id="bar-top" class="section scrollspy">
-          <h5>Sponsored Bars</h5>
-        </div>
-        <!-- loop through all bars USE PAPERCLIP FOR PHOTO UPLOAD https://rubygems.org/gems/paperclip -->
-        <% @bars.each do |b| %>
-          <%= div_for b, id:"#{b}", class:"section scrollspy" do %>
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title"><h2><b><%= b.name %></b></h2></span>
-              <% if b.url != "N/A"%>
-                <p><%= link_to "#{b.url}", "#{b.url}", target: '_blank' %></p>
-              <% else %>
-                <p><%= b.url %></p>
-              <% end %>
-              <p><%= b.address %></p>
-              <p><%= b.phone %></p>
-            </div>
+  <div class="row">
+    <div class="col s12 m9 l9">
+      <div id="bar-top" class="section scrollspy">
+        <h5>Sponsored Bars</h5>
+      </div>
+      <!-- loop through all bars USE PAPERCLIP FOR PHOTO UPLOAD https://rubygems.org/gems/paperclip -->
+      <% @bars.each do |b| %>
+        <%= div_for b, id:"#{b}", class:"section scrollspy" do %>
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"><h2><b><%= b.name %></b></h2></span>
+            <% if b.url != "N/A"%>
+              <p><%= link_to "#{b.url}", "#{b.url}", target: '_blank' %></p>
+            <% else %>
+              <p><%= b.url %></p>
+            <% end %>
+            <p><%= b.address %></p>
+            <p><%= b.phone %></p>
           </div>
-          <% end %>
+        </div>
         <% end %>
-      </div>
-      <!-- Loop through bars to create scrollspy links -->
-      <div class="col hide-on-small-only m3 l3 push right">
-        <ul class="section table-of-contents">
-          <p class="center">Content</p>
-          <% @bars.each do |b| %>
-            <li><%= link_to "#{b.name}", "#bar_#{b.id}" %></li>
-          <% end %>
-        </ul>
-      </div>
+      <% end %>
     </div>
+    <!-- Loop through bars to create scrollspy links -->
+    <div class="col hide-on-small-only m3 l3 push right">
+      <ul class="section table-of-contents">
+        <p class="center">Content</p>
+        <% @bars.each do |b| %>
+          <li><%= link_to "#{b.name}", "#bar_#{b.id}" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <div class="fixed-action-btn">
