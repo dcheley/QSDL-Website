@@ -1,7 +1,9 @@
 <div class="container">
   <h3>News</h3>
+  <li class="divider"></li>
   <% @news.each do |article| %>
-    <li><%= article.title %></li></br>
-    <%= article.content %>
+    <h4><%= article.title %></h4>
+    <p class="article-content"><%= article.content %><p>
+    <li class="divider"></li>
   <% end %>
 </div></br>
