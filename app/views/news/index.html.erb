@@ -1,7 +1,7 @@
 <div class="container">
   <h3>News</h3>
   <% @news.each do |article| %>
-    <%= article.title %></br>
+    <li><%= article.title %></li></br>
     <%= article.content %>
   <% end %>
 </div></br>
