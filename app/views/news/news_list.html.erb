@@ -2,12 +2,16 @@
 <div class="container">
   <h3>Manage News Articles</h3>
 
-  <%= link_to "Add Article", new_news_url %>
+  <p><%= link_to "ADD ARTICLE", new_news_url %></p>
+
+  <li class="divider"></li>
 
   <% @news.each do |article| %>
-    <li><%= link_to "#{article.title}", "/news/#{article.id}/edit"%></li>
+    <li class="article"><%= link_to "#{article.title}", "/news/#{article.id}/edit"%></li>
+    <%= article.content %>
     <%= button_to "Delete", {controller: :news,
       action: 'destroy', id: article.id }, method: :delete %>
+    </br><li class="divider"></li>
   <% end %>
 
 <% else %>
