@@ -32,7 +32,7 @@
       <li class="divider"></li>
     </ul>
   </div>
-<% if current_user %>
+
   <div class="nav-content">
     <ul class="tabs tabs-transparent">
       <li class="tab"><a href="#news">NEWS</a></li>
@@ -46,4 +46,3 @@
 <div id="teams" class="col s12"><a href="/teams/team_list">TEAMS</div>
 <div id="bars" class="col s12"><a href="/bars/bar_list">BARS</div>
 <div id="account" class="col s12"><%= link_to "ACCOUNT", "/users/#{session[:user_id]}/edit" %></div>
-<% end %>
