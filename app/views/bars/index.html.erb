@@ -12,7 +12,7 @@
         <div class="card blue-grey darken-1">
           <div class="card-content white-text">
             <span class="card-title"><h2><b><%= b.name %></b></h2></span>
-            <%= image_tag b.avatar.url %>
+            <p><%= image_tag b.avatar.url(:medium) %></p>
             <% if b.url != "N/A"%>
               <p><%= link_to "#{b.url}", "#{b.url}", target: '_blank' %></p>
             <% else %>
