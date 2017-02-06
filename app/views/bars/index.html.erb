@@ -1,11 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col s12 m9 l9">
-      </br><h5><%= link_to "Become a Sponsor!", "http://www.yourleaguestats.com/darts/qsdl/league-contact.php?type=sp", target: '_blank' %></h5>
-
       <div id="bar-top" class="section scrollspy">
-        <h5>Sponsored Bars</h5>
+        <h5><%= link_to "Become a Sponsor!", "http://www.yourleaguestats.com/darts/qsdl/league-contact.php?type=sp", target: '_blank' %></h5>
       </div>
+
+      <h5>Sponsored Bars</h5>
+
       <!-- loop through all bars USE PAPERCLIP FOR PHOTO UPLOAD https://rubygems.org/gems/paperclip -->
       <% @bars.each do |b| %>
         <%= div_for b, id:"#{b}", class:"section scrollspy" do %>
