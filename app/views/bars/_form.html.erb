@@ -1,4 +1,4 @@
-<%= form_for @bar, url: bars_url, html: { multipart: true }, remote: true, authenticity_token: true do |f| %>
+<%= form_for @bar, url: bar_url(@bar), html: { multipart: true }, remote: true, authenticity_token: true do |f| %>
   <% if @bar.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@bar.errors.count, "error") %> prohibited change!</h2>
