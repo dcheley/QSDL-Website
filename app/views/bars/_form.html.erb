@@ -32,7 +32,13 @@
 
     <div class="actions">
       <%= f.submit %>
-    </div></br>
+    </div>
+
+    <%= form_for @bar, url: bars_url, html: { multipart: true } do |form| %>
+      <div class="field">
+      <%= form.file_field :avatar %>
+      </div></br>
+    <% end %>
 
     <%= link_to 'Cancel', root_path %>
 <% end %>
