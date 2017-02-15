@@ -14,4 +14,15 @@ $(document).ready(function() {
     alignment: 'right', // Displays dropdown with edge aligned to the right of button
     stopPropagation: false // Stops event propagation
   });
+  $('.fixed-action-btn').hide();
+  $(window).scroll(function() {
+    var y_scroll_pos = window.pageYOffset;
+    var scroll_pos_test = 50;
+
+    if (y_scroll_pos > scroll_pos_test) {
+      $(".fixed-action-btn").show();
+    } else {
+      $(".fixed-action-btn").hide();
+    }
+  });
 });
