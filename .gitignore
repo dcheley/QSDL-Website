@@ -1,4 +1,6 @@
 tmp/*
 *.log
 .DS-Store
+application.rb
+application.yml
 /test
