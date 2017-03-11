@@ -2,6 +2,8 @@
 
 A website built to display information about Toronto's Queen Street Dart League.
 
+## Deployed Version: `http://qsdleague.herokuapp.com`
+
 * Responsive design through Materialize and CSS (including dropdowns, side-nav and scrollspy).
 
 * Admin able to login and create/update/delete info about Teams, Bars and News Articles.
