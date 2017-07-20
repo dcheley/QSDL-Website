@@ -2,15 +2,17 @@
 <html>
   <body>
     <div class="container">
-      <h3>BOARD OF DIRECTORS</h3>
-
+      <h5>BOARD OF DIRECTORS</h5>
       <p class="contacts"><b>President:</b> Paul LeBlanc</p>
       <p class="contacts"><b>Vice President:</b> Dave Cunningham</p>
       <p class="contacts"><b>Executive Members:</b> James Potter, Luisa Salerno, Chris Devos</p>
       <p class="contacts"><b>Past President:</b> Jason Little</p>
       <!--add each person's contact info? -->
-
-      </br><h5><%= link_to "Contact Form", "http://www.yourleaguestats.com/darts/qsdl/league-contact.php", class: "contact-form", target: '_blank' %></h5></br>
+    <h5>
+      <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-contact.php", class: "contact-form", target: '_blank' do %>
+        Contact Form<i class="material-icons" id="link-icon">launch</i>
+      <% end %>
+    </h5></br>
     </div>
   </body>
 </html>
