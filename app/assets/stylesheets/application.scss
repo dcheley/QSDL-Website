@@ -16,7 +16,8 @@
 @import "materialize";
 // @import "materialize/components/collapsible";
 
-.nav-extended, .nav-wrapper {
+.nav-extended,
+.nav-wrapper {
   background-color: #263238;
 }
 
@@ -30,18 +31,31 @@
   font-weight: bold;
 }
 
-#news, #teams, #bars, #account {
+h5 a:hover {
+  color: darkblue;
+}
+
+.paragraph {
+  text-align: justify;
+}
+
+#news,
+#teams,
+#bars,
+#account {
   font-weight: bold;
 }
 nav .brand-logo img {
   height: 64px;
 }
 
-#notice, #alert {
-  font-weight: bold;
+#notice,
+#alert {
+  color: #263238;
 }
 
-h3, h5 {
+h3,
+h5 {
   font-weight: bold !important;
 }
 
@@ -54,7 +68,8 @@ h3, h5 {
   list-style: none;
 }
 
-.fb, .twitter {
+.fb,
+.twitter {
   height: 25px;
   width: 25px;
 }
@@ -63,7 +78,7 @@ h3, h5 {
   text-align: right;
 }
 
-.card-content a, {
+.card-content a {
   color: #e0e0e0;
   font-weight: bold;
   font-style: italic;
