@@ -24,7 +24,11 @@
           <ul id ="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/">HOME</a></li>
             <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
-            <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
+            <li>
+              <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' do %>
+                LEAGUE STATS<i class="material-icons right">launch</i>
+              <% end %>
+            </li>
             <li><a href="/teams">TEAM & PLAYER STATS</a></li>
             <li><a href="/bars">SPONSORED BARS</a></li>
             <li><a href="/pages/downloads">DOWNLOADS</a></li>
@@ -36,7 +40,11 @@
             <li class="divider"></li>
             <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
             <li class="divider"></li>
-            <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
+            <li>
+              <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' do %>
+                LEAGUE STATS<i class="material-icons right">launch</i>
+              <% end %>
+            </li>
             <li class="divider"></li>
             <li><a href="/teams">TEAM & PLAYER STATS</a></li>
             <li class="divider"></li>
