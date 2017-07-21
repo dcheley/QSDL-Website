@@ -115,10 +115,6 @@ h5 {
   margin-top: 0;
 }
 
-.card-content p {
-  text-align: right;
-}
-
 .card-content a {
   color: #e0e0e0;
   font-weight: bold;
@@ -134,4 +130,12 @@ h5 {
 
 .dropdown-content {
   overflow: auto;
+}
+
+.card {
+  width: 500px;
+}
+
+.card .card-content {
+  text-align: left !important;
 }

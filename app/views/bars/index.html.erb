@@ -15,9 +15,11 @@
       <% @bars.each do |b| %>
         <%= div_for b, id:"#{b}", class:"section scrollspy" do %>
         <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
-            <span class="card-title"><h5><b><%= b.name %></b></h5></span>
+          <div class="card-image">
             <p><%= image_tag b.avatar.url(:medium) %></p>
+            <span class="card-title"><b><%= b.name %></b></span>
+          </div>
+          <div class="card-content white-text">
             <% if b.url != "N/A"%>
               <p><%= link_to "#{b.url}", "#{b.url}", target: '_blank' %></p>
             <% else %>
