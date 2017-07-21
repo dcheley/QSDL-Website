@@ -11,6 +11,10 @@
   font-weight: bold;
 }
 
+#admin-nav {
+  background-color: #37474f;
+}
+
 .tabs.tabs-transparent {
   background-color: #546e7a;
   font-weight: bold;
@@ -71,6 +75,16 @@ nav .brand-logo img {
 h5 {
   margin-top: 20px !important;
   font-weight: bold !important;
+}
+
+.nav-title {
+  font-size: 14px;
+  padding: 0 10px !important;
+  font-style: italic;
+}
+
+#button:hover {
+  background-color: #37474f !important;
 }
 
 .contacts {

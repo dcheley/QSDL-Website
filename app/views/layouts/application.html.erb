@@ -58,58 +58,19 @@
         </ul>
       </div>
     </nav>
-    
-    <% if current_user %>
-      <nav class="nav-extended">
-        <div class="nav-wrapper">
-          <!-- <a href="/" class="brand-logo left"><%= image_tag "logo.png", class: "logo" %></a> -->
-          <%= link_to image_tag("logo.png"), "/", class:"brand-logo" %>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul id ="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/">HOME</a></li>
-            <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
-            <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' %></li>
-            <li><a href="/teams">TEAM & PLAYER STATS</a></li>
-            <li><a href="/bars">SPONSORED BARS</a></li>
-            <li><a href="/pages/downloads">DOWNLOADS</a></li>
-            <li><%= link_to "NEWS", :news_index %></li>
-            <li><a href="/pages/contact">CONTACT US</a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="/pages/home">HOME</a></li>
-            <li class="divider"></li>
-            <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
-            <li class="divider"></li>
-            <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' %></li>
-            <li class="divider"></li>
-            <li><a href="/teams">TEAM & PLAYER STATS</a></li>
-            <li class="divider"></li>
-            <li><a href="/bars">SPONSORED BARS</a></li>
-            <li class="divider"></li>
-            <li><a href="/pages/downloads">DOWNLOADS</a></li>
-            <li class="divider"></li>
-            <li><%= link_to "NEWS", :news_index %></li>
-            <li class="divider"></li>
-            <li><a href="/pages/contact">CONTACT US</a></li>
-            <li class="divider"></li>
-          </ul>
-        </div>
 
-        <div class="nav-content">
-          <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#news">NEWS</a></li>
-            <li class="tab"><a href="#teams">TEAMS</a></li>
-            <li class="tab"><a href="#bars">BARS</a></li>
-            <li class="tab"><a href="#account">ACCOUNT</a></li>
-          </ul>
+    <% if current_user %>
+      <nav>
+        <div class="nav-wrapper" id="admin-nav">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="nav-title">MANAGE</li>
+              <li><%= link_to "NEWS", "/news/news_list" %></li>
+              <li><%= link_to "TEAMS", "/teams/team_list" %></li>
+              <li><%= link_to "BARS", "/bars/bar_list" %></li>
+              <li><%= link_to "ACCOUNT", "/users/#{session[:user_id]}/edit" %></li>
+            </ul>
         </div>
       </nav>
-      <div class="container center">
-        <div id="news" class="col s12"><%= link_to "NEWS", "/news/news_list", class:"waves-effect waves-light btn blue-grey darken-4" %></div>
-        <div id="teams" class="col s12"><%= link_to "TEAMS", "/teams/team_list", class:"waves-effect waves-light btn blue-grey darken-4" %></div>
-        <div id="bars" class="col s12"><%= link_to "BARS", "/bars/bar_list", class:"waves-effect waves-light btn blue-grey darken-4" %></div>
-        <div id="account" class="col s12"><%= link_to "ACCOUNT", "/users/#{session[:user_id]}/edit", class:"waves-effect waves-light btn blue-grey darken-4" %></div>
-      </div>
     <% end %>
 
     <div class="container center">
