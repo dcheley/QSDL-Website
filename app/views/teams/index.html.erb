@@ -22,7 +22,7 @@
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
     <% @teams.where(division: "A").each do |t| %>
-      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank' %></li>
+      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
     <% end %>
   </ul>
 
@@ -31,7 +31,7 @@
   <!-- Dropdown Structure -->
   <ul id='dropdown2' class='dropdown-content'>
     <% @teams.where(division: "B1").each do |t| %>
-      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank' %></li>
+      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
     <% end %>
   </ul>
 
@@ -40,7 +40,7 @@
   <!-- Dropdown Structure -->
   <ul id='dropdown3' class='dropdown-content'>
     <% @teams.where(division: "B2").each do |t| %>
-      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank' %></li>
+      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
     <% end %>
   </ul>
 
@@ -49,7 +49,7 @@
   <!-- Dropdown Structure -->
   <ul id='dropdown4' class='dropdown-content'>
     <% @teams.where(division: "C").each do |t| %>
-      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank' %></li>
+      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
     <% end %>
   </ul>
 
