@@ -1,11 +1,11 @@
 <% if current_user %>
 <div class="container">
-  <h3>Edit Login Settings</h3>
+  <h5>Edit Login Settings</h5>
 
   <%= form_for(@user) do |f| %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@user.errors.count, "error") %> prohibited change!</h2>
+        <h5><%= pluralize(@user.errors.count, "error") %> prohibited change!</h5>
         <ul>
         <% @user.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -29,13 +29,13 @@
         <%= f.text_field :password_confirmation %>
       </div>
 
-      <div class="actions">
-        <%= f.submit "Save" %>
-      </div>
+      <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
+        <%= f.submit "save"%>
+      </button></br></br>
   <% end %>
 
 <% else %>
 <div class="container">
-  <h3>Unauthorized!</h3>
+  <h5>Unauthorized!</h5>
 <% end %>
 </div></br>

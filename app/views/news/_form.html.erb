@@ -1,10 +1,10 @@
 <%= form_for(@new) do |f| %>
   <% if @new.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@new.errors.count, "error") %> prohibited change!</h2>
+      <h5><%= pluralize(@new.errors.count, "error") %> prohibited change!</h5>
       <ul>
       <% @new.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li class="error"><%= msg %></li>
       <% end %>
       </ul>
     </div>
@@ -20,9 +20,9 @@
       <%= f.text_area :content %>
     </div>
 
-    <div class="actions">
+    <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
       <%= f.submit %>
-    </div></br>
+    </button></br></br>
 
-    <%= link_to 'Cancel', root_path %>
+    <%= link_to 'Cancel', 'news/news_list', class:"link" %>
 <% end %>
