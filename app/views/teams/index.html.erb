@@ -13,8 +13,6 @@
       <% end %>
     </p>
   </div>
-
-  <% if !current_user %>
   <!-- Loop through team names and urls by division for specefic team stats links -->
 
   <!-- Dropdown Trigger -->
@@ -52,8 +50,4 @@
       <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
     <% end %>
   </ul>
-
-  <% else %>
-    <h4>Logout to view Individual Team Stat links</h4>
-  <% end %>
 </div></br>
