@@ -6,9 +6,7 @@
         <h5>Manage Bar Info</h5>
       </div>
 
-      <%= link_to "ADD BAR", new_bar_url, class:"btn blue-grey darken-1 waves-effect waves-light", id:"button" %>    
-
-      <li class="divider"></li>
+      <%= link_to "ADD BAR", new_bar_url, class:"btn blue-grey darken-1 waves-effect waves-light", id:"button" %>
 
       <% @bars.each do |b| %>
         <%= div_for b, id:"#{b}", class:"section scrollspy" do %>

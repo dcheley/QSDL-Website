@@ -8,12 +8,12 @@
 
         <%= link_to "ADD ARTICLE", new_news_url, class:"btn blue-grey darken-1 waves-effect waves-light", id:"button" %>
 
-        <li class="divider"></li>
-
         <% @news.each do |article| %>
           <%= div_for article, id:"#{article}", class:"section scrollspy" do %>
             <li class="backend-list"><%= link_to "#{article.title}", "/news/#{article.id}/edit", class:"link" %></li>
-            <p><%= article.content %></p>
+            <p><%= article.paragraph_one %></p>
+            <p><%= article.paragraph_two %></p>
+            <p><%= article.paragraph_three %></p>
             <p><b>Updated:</b> <%= article.updated_at.strftime("%a, %B %d, %Y") %></p>
             <%= button_to "Delete", {controller: :news, action: 'destroy', id: article.id }, method: :delete, data: {confirm: "Are you sure?"}, class:"btn red darken-3 waves-effect waves-light" %></br>
             <li class="divider"></li>

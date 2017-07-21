@@ -8,8 +8,6 @@
 
       <%= link_to "ADD TEAM", new_team_url, class:"btn blue-grey darken-1 waves-effect waves-light", id:"button" %>
 
-      <li class="divider"></li>
-
       <% @teams.each do |t| %>
         <%= div_for t, id:"#{t}", class:"section scrollspy" do %>
           <li class="backend-list"><%= link_to "#{t.name}", "/teams/#{t.id}/edit", class:"link" %></li>
