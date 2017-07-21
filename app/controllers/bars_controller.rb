@@ -36,7 +36,7 @@ class BarsController < ApplicationController
   def destroy
     @bar = Bar.find(params[:id])
     @bar.destroy
-    redirect_to "/bars/bar_list", notice: "Bar deleted!"
+    redirect_to :bar_list, notice: "#{@bar.name} deleted!"
   end
 
   private

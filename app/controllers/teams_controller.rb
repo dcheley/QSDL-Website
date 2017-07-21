@@ -36,7 +36,7 @@ class TeamsController < ApplicationController
   def destroy
     @team = Team.find(params[:id])
     @team.destroy
-    redirect_to "/teams/team_list", notice: "Team deleted!"
+    redirect_to :team_list, notice: "#{@team.name} deleted!"
   end
 
   private

@@ -82,13 +82,17 @@ h5 {
 }
 
 .nav-title {
-  font-size: 14px;
+  font-size: 16px !important;
   padding: 0 10px !important;
   font-style: italic;
 }
 
 #button:hover {
   background-color: #37474f !important;
+}
+
+.btn.red:hover {
+  background-color: #b71c1c !important;
 }
 
 .contacts {
