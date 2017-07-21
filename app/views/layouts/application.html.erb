@@ -24,7 +24,7 @@
           <li><a href="/">HOME</a></li>
           <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
           <li>
-            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' do %>
+            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
               LEAGUE STATS<i class="material-icons right">launch</i>
             <% end %>
           </li>
@@ -40,7 +40,7 @@
           <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
           <li class="divider"></li>
           <li>
-            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' do %>
+            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
               LEAGUE STATS<i class="material-icons right">launch</i>
             <% end %>
           </li>
@@ -67,7 +67,7 @@
           <ul id ="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/">HOME</a></li>
             <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
-            <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
+            <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' %></li>
             <li><a href="/teams">TEAM & PLAYER STATS</a></li>
             <li><a href="/bars">SPONSORED BARS</a></li>
             <li><a href="/pages/downloads">DOWNLOADS</a></li>
@@ -79,7 +79,7 @@
             <li class="divider"></li>
             <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
             <li class="divider"></li>
-            <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target: '_blank' %></li>
+            <li><%= link_to "LEAGUE STATS", "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' %></li>
             <li class="divider"></li>
             <li><a href="/teams">TEAM & PLAYER STATS</a></li>
             <li class="divider"></li>
@@ -133,23 +133,31 @@
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="black-text">Related Links</h5>
-            <ul>
-              <%= link_to image_tag('b-fb.png', class: "fb"), "https://www.facebook.com/groups/qsdl.darts", target: '_blank' %>
-              <%= link_to image_tag('b-twitter.png', class: "twitter"), "https://twitter.com/TorontoDarts", target: '_blank' %>
-              <li><a class="black-text" href="http://www.yourleaguestats.com/darts/qsdl" target='_blank'>Your League Stats</a></li>
-              <li><a class="black-text" href="http://www.torontodarts.com" target='_blank'>Toronto Darts</a></li>
+            <ul class="footer-list">
+              <%= link_to image_tag('b-fb.png', class: "fb"), "https://www.facebook.com/groups/qsdl.darts", target:'_blank' %>
+              <%= link_to image_tag('b-twitter.png', class: "twitter"), "https://twitter.com/TorontoDarts", target:'_blank' %>
+              <li>
+                <%= link_to "http://www.yourleaguestats.com/darts/qsdl", target:'_blank', class:"link" do %>
+                  Your League Stats<i class="material-icons" id="link-icon">launch</i>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "http://www.torontodarts.com", target:'_blank', class:"link" do %>
+                  Toronto Darts<i class="material-icons" id="link-icon">launch</i>
+                <% end %>
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container black-text">
-        © 2017 Queen Street Dart League
-        <% if current_user %>
-          <%= link_to "Logout", :logout, class:"black-text right" %>
-        <% else %>
-          <%= link_to "Login", :login, class:"black-text right" %>
-        <% end %>
+          © 2017 Queen Street Dart League
+          <% if current_user %>
+            <%= link_to "Logout", :logout, class:"black-text right" %>
+          <% else %>
+            <%= link_to "Login", :login, class:"black-text right" %>
+          <% end %>
         </div>
       </div>
     </footer>
