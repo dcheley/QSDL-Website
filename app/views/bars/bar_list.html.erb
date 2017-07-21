@@ -12,7 +12,7 @@
 
       <% @bars.each do |b| %>
         <%= div_for b, id:"#{b}", class:"section scrollspy" do %>
-          <li class="backend-list"><%= link_to "#{b.name}", "/bars/#{b.id}/edit" %></li>
+          <li class="backend-list"><%= link_to "#{b.name}", "/bars/#{b.id}/edit", class:"link" %></li>
           <p><%= image_tag b.avatar.url(:medium) %></p>
           <p><b>Updated:</b> <%= b.updated_at.strftime("%a, %B %d, %Y") %></p>
           <%= button_to "Delete", {controller: :bars, action: 'destroy', id: b.id }, method: :delete %></br>
