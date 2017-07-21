@@ -25,7 +25,7 @@
           <li><a href="/pages/join">JOIN THE LEAGUE</a></li>
           <li>
             <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
-              LEAGUE STATS<i class="material-icons right">launch</i>
+              LEAGUE STATS<i class="material-icons right" id="nav-icon">launch</i>
             <% end %>
           </li>
           <li><a href="/teams">TEAM & PLAYER STATS</a></li>
@@ -41,7 +41,7 @@
           <li class="divider"></li>
           <li>
             <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
-              LEAGUE STATS<i class="material-icons right">launch</i>
+              LEAGUE STATS<i class="material-icons right" id="nav-icon">launch</i>
             <% end %>
           </li>
           <li class="divider"></li>
@@ -58,6 +58,7 @@
         </ul>
       </div>
     </nav>
+    
     <% if current_user %>
       <nav class="nav-extended">
         <div class="nav-wrapper">
