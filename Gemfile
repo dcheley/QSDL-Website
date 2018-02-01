@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem "record_tag_helper", '~> 1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "> 5.1.0"
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.10'
 
