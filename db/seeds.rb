@@ -14,7 +14,7 @@ Team.create([{ name: 'Gravediggers', division: 'A', url: "http://www.yourleagues
   { name: 'Anger Management', division: 'B1', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=24" },
   { name: 'Balrogs', division: 'B1', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=51" },
   { name: 'All Blacks', division: 'B1', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=39" },
-  { name: 'Arrows', division: 'B1', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=741" },
+  { name: 'Worst Guys', division: 'B1', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=741" },
   { name: 'DWA', division: 'B1', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=793" },
   { name: 'DCMC', division: 'B1', url: "http://www.yourleaguestats.com/darts/qsdl/team.php?id=790" },
 
