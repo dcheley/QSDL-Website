@@ -82,12 +82,12 @@
     <% end %>
 
     <div class="container center">
-    <% if flash[:notice] %>
-      <h5 id="notice"><%= flash[:notice] %></h5>
-    <% end %>
-    <% if flash[:alert] %>
-      <h5 id="alert"><%= flash[:alert] %></h5>
-    <% end %>
+      <% if flash[:notice] %>
+        <h5 id="notice"><%= flash[:notice] %></h5>
+      <% end %>
+      <% if flash[:alert] %>
+        <h5 id="alert"><%= flash[:alert] %></h5>
+      <% end %>
     </div>
 
     <%= yield %>
@@ -121,12 +121,12 @@
               <%= link_to image_tag('twitter.svg', class: "twitter"), "https://twitter.com/TorontoDarts", target:'_blank' %>
               <li>
                 <%= link_to "http://www.yourleaguestats.com/darts/qsdl", target:'_blank', class:"link" do %>
-                  Your League Stats<i class="material-icons" id="link-icon">launch</i>
+                  Your League Stats<i class="material-icons" id="footer-icon">launch</i>
                 <% end %>
               </li>
               <li>
                 <%= link_to "http://www.torontodarts.com", target:'_blank', class:"link" do %>
-                  Toronto Darts<i class="material-icons" id="link-icon">launch</i>
+                  Toronto Darts<i class="material-icons" id="footer-icon">launch</i>
                 <% end %>
               </li>
             </ul>
