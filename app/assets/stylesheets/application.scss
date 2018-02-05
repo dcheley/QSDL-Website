@@ -1,5 +1,4 @@
 @import "materialize";
-// @import "materialize/components/collapsible";
 
 .nav-extended,
 .nav-wrapper {
@@ -8,6 +7,7 @@
 
 .nav-wrapper a {
   color: #e0e0e0;
+  font-size: 14px;
 }
 
 #admin-nav {
