@@ -12,6 +12,10 @@ class TeamsController < ApplicationController
     end
   end
 
+  def show
+    @team = Time.find(params[:id])
+  end
+  
   def index
     @teams = Team.all.order("name ASC")
   end

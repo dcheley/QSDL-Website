@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root "pages#show", page: "home"
 
   resources :users, only: [:edit, :update]
-  resources :teams, only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :teams, only: [:show, :index, :edit, :update, :new, :create, :destroy]
   resources :bars, only: [:index, :edit, :update, :new, :create, :destroy]
   resources :news, only: [:index, :edit, :update, :new, :create, :destroy]
 
