@@ -14,6 +14,13 @@
   background-color: #37474f;
 }
 
+.active-li {
+  background-color: #e0e0e0;
+  a {
+    color: #263238;
+  }
+}
+
 #admin-nav {
   background-color: #37474f;
 }
@@ -141,6 +148,7 @@ nav .brand-logo img {
 
 h5 {
   margin-top: 20px !important;
+  margin-bottom: 15px;
   font-weight: bold !important;
 }
 
@@ -158,6 +166,7 @@ h5 {
 .divider {
   clear: both;
 }
+
 #button:hover {
   background-color: #37474f !important;
 }

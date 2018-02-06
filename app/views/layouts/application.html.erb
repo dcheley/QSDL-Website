@@ -17,11 +17,11 @@
   <body>
     <!-- Dropdown Structure -->
     <ul id='dropdown5' class='dropdown-content'>
-      <li><%= link_to "Captains", :captain_news, class:"link" %></li>
+      <li class="<%= current_page?(captain_news_url) ? 'active-li' : 'nav-li' %>"><%= link_to "Captains", :captain_news, class:"link" %></li>
       <li class="divider"></li>
-      <li><%= link_to "Players", :player_news, class:"link" %></li>
+      <li class="<%= current_page?(player_news_url) ? 'active-li' : 'nav-li' %>"><%= link_to "Players", :player_news, class:"link" %></li>
       <li class="divider"></li>
-      <li><%= link_to "Tournaments", :tournament_news, class:"link" %></li>
+      <li class="<%= current_page?(tournament_news_url) ? 'active-li' : 'nav-li' %>"><%= link_to "Tournaments", :tournament_news, class:"link" %></li>
     </ul>
     <nav>
       <div class="nav-wrapper">
@@ -29,17 +29,22 @@
         <%= link_to image_tag("logo.png"), "/", class:"brand-logo" %>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li class="nav-li"><a href="/">HOME</a></li>
+          <li class="<%= current_page?(root_url) ? 'active-li' : 'nav-li' %>"><a href="/">HOME</a></li>
           <li class="nav-li">
             <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
               LEAGUE STATS<i class="material-icons right" id="nav-icon">launch</i>
             <% end %>
           </li>
-          <li class="nav-li"><a href="/teams">TEAMS</a></li>
-          <li class="nav-li"><a href="/bars">SPONSORED BARS</a></li>
+          <li class="<%= current_page?(controller: 'teams') ? 'active-li' : 'nav-li' %>"><a href="/teams">TEAMS</a></li>
+          <li class="<%= current_page?(bars_url) ? 'active-li' : 'nav-li' %>"><a href="/bars">SPONSORED BARS</a></li>
           <!-- Dropdown Trigger -->
-          <li><a class='dropdown-button blue-grey darken-4' id="nav-dropdown" href='#' data-activates='dropdown5'>NEWS<i class="material-icons right" id="nav-icon">arrow_drop_down</i></a></li>
-          <li class="nav-li"><a href="/pages/contact">CONTACT US</a></li>
+          <li>
+            <a class='dropdown-button blue-grey darken-4' id="nav-dropdown" href='#' data-activates='dropdown5'>
+              NEWS
+              <i class="material-icons right" id="nav-icon">arrow_drop_down</i>
+            </a>
+          </li>
+          <li class="<%= current_page?("/pages/contact") ? 'active-li' : 'nav-li' %>"><a href="/pages/contact">CONTACT US</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="/pages/home">HOME</a></li>
