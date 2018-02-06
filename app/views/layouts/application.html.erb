@@ -28,18 +28,18 @@
         <!-- <a href="/" class="brand-logo left"><%= image_tag "logo.png", class: "logo" %></a> -->
         <%= link_to image_tag("logo.png"), "/", class:"brand-logo" %>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul id ="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="/">HOME</a></li>
-          <li>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="nav-li"><a href="/">HOME</a></li>
+          <li class="nav-li">
             <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
               LEAGUE STATS<i class="material-icons right" id="nav-icon">launch</i>
             <% end %>
           </li>
-          <li><a href="/teams">TEAMS</a></li>
-          <li><a href="/bars">SPONSORED BARS</a></li>
+          <li class="nav-li"><a href="/teams">TEAMS</a></li>
+          <li class="nav-li"><a href="/bars">SPONSORED BARS</a></li>
           <!-- Dropdown Trigger -->
           <li><a class='dropdown-button blue-grey darken-4' id="nav-dropdown" href='#' data-activates='dropdown5'>NEWS<i class="material-icons right" id="nav-icon">arrow_drop_down</i></a></li>
-          <li><a href="/pages/contact">CONTACT US</a></li>
+          <li class="nav-li"><a href="/pages/contact">CONTACT US</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="/pages/home">HOME</a></li>
