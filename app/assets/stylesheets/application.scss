@@ -45,14 +45,19 @@
 
 .parallax-link {
   font-size: 32px;
-  color: white;
+  color: black;
   list-style: none;
   padding: 20px 10px;
-  border: 3px solid white;
+  border: 3px solid black;
 }
 
 .parallax-link:hover {
   background-color: #263238;
+  color: white;
+  border-color: white;
+  #parllax-icon {
+    color: white;
+  }
 }
 
 #parallax-icon {
