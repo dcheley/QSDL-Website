@@ -11,13 +11,18 @@
   <% end %>
 
     <div class="field">
+      <%= f.label :category %>
+      <%= f.text_field :category, required: true %>
+    </div>
+
+    <div class="field">
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, required: true %>
     </div>
 
     <div class="field">
       <%= f.label :paragraph_one %>
-      <%= f.text_area :paragraph_one %>
+      <%= f.text_area :paragraph_one, required: true %>
     </div>
 
     <div class="field">

@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20180206150945) do
     t.datetime "updated_at",      null: false
     t.text     "paragraph_two"
     t.text     "paragraph_three"
-    t.string   "type"
+    t.string   "category"
   end
 
   create_table "teams", force: :cascade do |t|

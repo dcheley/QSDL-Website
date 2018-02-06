@@ -15,7 +15,7 @@ class TeamsController < ApplicationController
   def show
     @team = Time.find(params[:id])
   end
-  
+
   def index
     @teams = Team.all.order("name ASC")
   end
@@ -45,6 +45,6 @@ class TeamsController < ApplicationController
 
   private
   def team_params
-    params.require(:team).permit(:name, :division, :url)
+    params.require(:team).permit(:name, :division, :url, :bar_id)
   end
 end

@@ -1,6 +1,7 @@
 class NewsController < ApplicationController
   def new
     @new = News.new
+    @options = ["Captains", "Players", "Tournaments"]
   end
 
   def create
@@ -41,6 +42,7 @@ class NewsController < ApplicationController
 
   private
   def news_params
-    params.require(:news).permit(:title, :paragraph_one, :paragraph_two, :paragraph_three)
+    params.require(:news).permit(:title, :category, :paragraph_one, :paragraph_two,
+    :paragraph_three)
   end
 end
