@@ -41,7 +41,33 @@
   #footer-icon {
     color: darkblue !important;
   }
- }
+}
+
+.parallax-link {
+  font-size: 32px;
+  color: white;
+  list-style: none;
+  padding: 20px 10px;
+  border: 3px solid white;
+}
+
+.parallax-link:hover {
+  background-color: #263238;
+}
+
+#parallax-icon {
+  vertical-align: middle;
+  margin-left: 10px;
+  font-size: 32px;
+}
+
+.parallax-container {
+  text-align: center;
+}
+
+.parallax {
+  opacity: 0.7;
+}
 
 .side-nav li > a > i.material-icons {
   line-height: 62px;

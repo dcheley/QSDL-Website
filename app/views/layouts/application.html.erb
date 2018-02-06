@@ -23,18 +23,12 @@
         <ul id ="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/">HOME</a></li>
           <li>
-            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-contact.php?type=jl", target: '_blank' do %>
-              JOIN THE LEAGUE<i class="material-icons right" id="nav-icon">launch</i>
-            <% end %>
-          </li>
-          <li>
             <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
               LEAGUE STATS<i class="material-icons right" id="nav-icon">launch</i>
             <% end %>
           </li>
           <li><a href="/teams">TEAMS</a></li>
           <li><a href="/bars">SPONSORED BARS</a></li>
-          <li><a href="/pages/downloads">DOWNLOADS</a></li>
           <li><%= link_to "NEWS", :news_index %></li>
           <li><a href="/pages/contact">CONTACT US</a></li>
         </ul>
@@ -42,12 +36,6 @@
           <li><a href="/pages/home">HOME</a></li>
           <li class="divider"></li>
           <li>
-            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-contact.php?type=jl", target: '_blank' do %>
-              JOIN THE LEAGUE<i class="material-icons right" id="nav-icon">launch</i>
-            <% end %>
-          </li>
-          <li class="divider"></li>
-          <li>
             <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
               LEAGUE STATS<i class="material-icons right" id="nav-icon">launch</i>
             <% end %>
@@ -56,8 +44,6 @@
           <li><a href="/teams">TEAMS</a></li>
           <li class="divider"></li>
           <li><a href="/bars">SPONSORED BARS</a></li>
-          <li class="divider"></li>
-          <li><a href="/pages/downloads">DOWNLOADS</a></li>
           <li class="divider"></li>
           <li><%= link_to "NEWS", :news_index %></li>
           <li class="divider"></li>
@@ -119,6 +105,7 @@
             <ul class="footer-list">
               <%= link_to image_tag('facebook-logo-button.svg', class: "fb"), "https://www.facebook.com/groups/qsdl.darts", target:'_blank' %>
               <%= link_to image_tag('twitter.svg', class: "twitter"), "https://twitter.com/TorontoDarts", target:'_blank' %>
+              <li><a href="/pages/downloads" class="link">Downloads</a></li>
               <li>
                 <%= link_to "http://www.yourleaguestats.com/darts/qsdl", target:'_blank', class:"link" do %>
                   Your League Stats<i class="material-icons" id="footer-icon">launch</i>
