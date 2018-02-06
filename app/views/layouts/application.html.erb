@@ -15,6 +15,14 @@
   </head>
 
   <body>
+    <!-- Dropdown Structure -->
+    <ul id='dropdown5' class='dropdown-content'>
+      <li><%= link_to "Captains", "/news", class:"link" %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Players", "/news", class:"link" %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Tournaments", "/news", class:"link" %></li>
+    </ul>
     <nav>
       <div class="nav-wrapper">
         <!-- <a href="/" class="brand-logo left"><%= image_tag "logo.png", class: "logo" %></a> -->
@@ -29,7 +37,8 @@
           </li>
           <li><a href="/teams">TEAMS</a></li>
           <li><a href="/bars">SPONSORED BARS</a></li>
-          <li><%= link_to "NEWS", :news_index %></li>
+          <!-- Dropdown Trigger -->
+          <li><a class='dropdown-button blue-grey darken-4' id="nav-dropdown" href='#' data-activates='dropdown5'>NEWS<i class="material-icons right" id="nav-icon">arrow_drop_down</i></a></li>
           <li><a href="/pages/contact">CONTACT US</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
@@ -37,7 +46,7 @@
           <li class="divider"></li>
           <li>
             <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
-              LEAGUE STATS<i class="material-icons right" id="nav-icon">launch</i>
+              LEAGUE STATS<i class="material-icons right" id="side-nav-icon">launch</i>
             <% end %>
           </li>
           <li class="divider"></li>
@@ -45,7 +54,10 @@
           <li class="divider"></li>
           <li><a href="/bars">SPONSORED BARS</a></li>
           <li class="divider"></li>
-          <li><%= link_to "NEWS", :news_index %></li>
+          <li><p class='side-nav-header'>NEWS:</p></li>
+          <li><%= link_to "- Captains", :news_index %></li>
+          <li><%= link_to "- Players", :news_index %></li>
+          <li><%= link_to "- Tournaments", :news_index %></li>
           <li class="divider"></li>
           <li><a href="/pages/contact">CONTACT US</a></li>
           <li class="divider"></li>

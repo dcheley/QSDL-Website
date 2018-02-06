@@ -28,6 +28,13 @@
   margin-left: 5px;
 }
 
+#side-nav-icon {
+  font-size: 18px;
+  line-height: 48px;
+  color: black;
+  margin-right: 40%;
+}
+
 .link,
 #link-icon {
   color: #337ab7 !important;
@@ -41,6 +48,23 @@
   #footer-icon {
     color: darkblue !important;
   }
+}
+
+#nav-dropdown {
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.side-nav-header {
+  color: rgba(0, 0, 0, 0.87);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 48px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 32px;
 }
 
 .parallax-link {
