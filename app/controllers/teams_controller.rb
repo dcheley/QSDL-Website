@@ -6,7 +6,7 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(team_params)
     if @team.save
-      redirect_to "/teams/team_list", notice: "#{@team.name} created!"
+      redirect_to :team_list, notice: "#{@team.name} created!"
     else
       render :new
     end
@@ -31,7 +31,7 @@ class TeamsController < ApplicationController
   def update
     @team = Team.find(params[:id])
     if @team.update_attributes(team_params)
-      redirect_to "/teams/team_list", notice: "Team updated!"
+      redirect_to :team_list, notice: "Team updated!"
     else
       render :edit
     end
