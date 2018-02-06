@@ -1,53 +1,37 @@
 <div class="container">
   <h5>Team & Player Stats</h5>
-  <div class="wrap">
-    <!-- Replace -->
-    <p>
-      <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank', class:"link" do %>
-        League Team Stats (All Divisions)<i class="material-icons" id="link-icon">launch</i>
-      <% end %>
-    </p>
-    <p>
-      <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-stats.php", target:'_blank', class:"link" do %>
-        League Individual Stats (All Divisions)<i class="material-icons" id="link-icon">launch</i>
-      <% end %>
-    </p>
-  </div>
+
   <!-- Loop through team names and urls by division for specefic team stats links -->
-
-  <!-- Dropdown Trigger -->
-  <a class='dropdown-button blue-grey darken-1 btn' href='#' data-activates='dropdown1'>Division A</a>
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <% @teams.where(division: "A").each do |t| %>
-      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
-    <% end %>
-  </ul>
-
-  <!-- Dropdown Trigger -->
-  <a class='dropdown-button blue-grey darken-1 btn' href='#' data-activates='dropdown2'>Division B1</a>
-  <!-- Dropdown Structure -->
-  <ul id='dropdown2' class='dropdown-content'>
-    <% @teams.where(division: "B1").each do |t| %>
-      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
-    <% end %>
-  </ul>
-
-  <!-- Dropdown Trigger -->
-  <a class='dropdown-button blue-grey darken-1 btn' href='#' data-activates='dropdown3'>Division B2</a>
-  <!-- Dropdown Structure -->
-  <ul id='dropdown3' class='dropdown-content'>
-    <% @teams.where(division: "B2").each do |t| %>
-      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
-    <% end %>
-  </ul>
-
-  <!-- Dropdown Trigger -->
-  <a class='dropdown-button blue-grey darken-1 btn' href='#' data-activates='dropdown4'>Division C</a>
-  <!-- Dropdown Structure -->
-  <ul id='dropdown4' class='dropdown-content'>
-    <% @teams.where(division: "C").each do |t| %>
-      <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
-    <% end %>
-  </ul>
+  <div class="team-section">
+    <div class='blue-grey darken-1 btn'>Division A</div>
+    <ul>
+      <% @teams.where(division: "A").each do |t| %>
+        <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="team-section">
+    <div class='blue-grey darken-1 btn'>Division B1</div>
+    <ul>
+      <% @teams.where(division: "B1").each do |t| %>
+        <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="team-section">
+    <div class='blue-grey darken-1 btn'>Division B2</div>
+      <ul>
+        <% @teams.where(division: "B2").each do |t| %>
+          <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
+        <% end %>
+      </ul>
+  </div>
+  <div class="team-section">
+    <div class='blue-grey darken-1 btn'>Division C</div>
+    <ul>
+      <% @teams.where(division: "C").each do |t| %>
+        <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
+      <% end %>
+    </ul>
+  </div>
 </div></br>

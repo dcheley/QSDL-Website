@@ -107,10 +107,6 @@
   line-height: 62px;
 }
 
-.wrap {
-  width: 300px;
-}
-
 #footer-icon,
 #link-icon {
   vertical-align: middle;
@@ -129,6 +125,7 @@
 .footer-copyright a:hover {
   text-decoration: underline;
 }
+
 .paragraph {
   text-align: justify;
 }
@@ -153,6 +150,14 @@ h5 {
   font-style: italic;
 }
 
+.team-section {
+  float: left;
+  width: 25%;
+}
+
+.divider {
+  clear: both;
+}
 #button:hover {
   background-color: #37474f !important;
 }
