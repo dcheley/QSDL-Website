@@ -17,11 +17,11 @@
   <body>
     <!-- Dropdown Structure -->
     <ul id='dropdown5' class='dropdown-content'>
-      <li><%= link_to "Captains", "/news", class:"link" %></li>
+      <li><%= link_to "Captains", :captain_news, class:"link" %></li>
       <li class="divider"></li>
-      <li><%= link_to "Players", "/news", class:"link" %></li>
+      <li><%= link_to "Players", :player_news, class:"link" %></li>
       <li class="divider"></li>
-      <li><%= link_to "Tournaments", "/news", class:"link" %></li>
+      <li><%= link_to "Tournaments", :tournament_news, class:"link" %></li>
     </ul>
     <nav>
       <div class="nav-wrapper">
@@ -55,9 +55,9 @@
           <li><a href="/bars">SPONSORED BARS</a></li>
           <li class="divider"></li>
           <li><p class='side-nav-header'>NEWS:</p></li>
-          <li><%= link_to "- Captains", :news_index %></li>
-          <li><%= link_to "- Players", :news_index %></li>
-          <li><%= link_to "- Tournaments", :news_index %></li>
+          <li><%= link_to "- Captains", :captain_news %></li>
+          <li><%= link_to "- Players", :player_news %></li>
+          <li><%= link_to "- Tournaments", :tournament_news %></li>
           <li class="divider"></li>
           <li><a href="/pages/contact">CONTACT US</a></li>
           <li class="divider"></li>

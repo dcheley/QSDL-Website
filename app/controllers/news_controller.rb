@@ -31,6 +31,18 @@ class NewsController < ApplicationController
     redirect_to :news_list, notice: "Article deleted!"
   end
 
+  def captains
+    @news = News.where(category: "Captains")
+  end
+
+  def players
+    @news = News.where(category: "Players")
+  end
+
+  def tournaments
+    @news = News.where(category: "Tournaments")
+  end
+
   def index
     @news = News.all.order("title ASC")
   end

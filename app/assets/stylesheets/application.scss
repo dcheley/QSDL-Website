@@ -91,6 +91,7 @@
 }
 
 .parallax-container {
+  width: 100%;
   text-align: center;
 }
 
@@ -189,8 +190,6 @@ h5 {
 .dropdown-button {
   margin-right: 15px;
   margin-top: 5px;
-  margin-bottom: 30px;
-  width: auto !important;
 }
 
 .dropdown-content {
