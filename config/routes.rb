@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
   root "pages#show", page: "home"
 
-  resources :users, only: [:edit, :update]
-  resources :teams, only: [:show, :index, :edit, :update, :new, :create, :destroy]
-  resources :bars, only: [:index, :edit, :update, :new, :create, :destroy]
-  resources :news, only: [:index, :edit, :update, :new, :create, :destroy]
-
   get "/pages/*page" => "pages#show"
   get 'login' => 'sessions#new', as: :login
   post 'login' => 'sessions#create'
@@ -13,4 +8,9 @@ Rails.application.routes.draw do
   get "/teams/team_list" => "teams#team_list", as: :team_list
   get "/bars/bar_list" => "bars#bar_list", as: :bar_list
   get "/news/news_list" => "news#news_list", as: :news_list
+
+  resources :users, only: [:edit, :update]
+  resources :teams, only: [:show, :index, :edit, :update, :new, :create, :destroy]
+  resources :bars, only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :news, only: [:index, :edit, :update, :new, :create, :destroy]
 end

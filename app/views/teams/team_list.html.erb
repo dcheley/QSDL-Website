@@ -20,7 +20,9 @@
     <!-- Loop through teams to create scrollspy links -->
     <div class="col hide-on-small-only m3 l3 push right">
       <ul class="section table-of-contents">
-        <p class="center">Content</p>
+        <% if !@teams.empty? %>
+          <p class="center">Content</p>
+        <% end %>
         <% @teams.each do |t| %>
           <li><%= link_to "#{t.name}", "#team_#{t.id}" %></li>
         <% end %>

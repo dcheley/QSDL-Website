@@ -13,7 +13,7 @@ class TeamsController < ApplicationController
   end
 
   def show
-    @team = Time.find(params[:id])
+    @team = Team.find(params[:id])
   end
 
   def index
