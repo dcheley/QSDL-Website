@@ -5,7 +5,7 @@
   <div class="team-section">
     <div class='blue-grey darken-1 btn'>Division A</div>
     <ul>
-      <% @teams.where(division: "A").each do |t| %>
+      <% @teams.where(division: "Premier").each do |t| %>
         <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
       <% end %>
     </ul>
@@ -13,7 +13,7 @@
   <div class="team-section">
     <div class='blue-grey darken-1 btn'>Division B1</div>
     <ul>
-      <% @teams.where(division: "B1").each do |t| %>
+      <% @teams.where(division: "B_East").each do |t| %>
         <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
       <% end %>
     </ul>
@@ -21,7 +21,7 @@
   <div class="team-section">
     <div class='blue-grey darken-1 btn'>Division B2</div>
       <ul>
-        <% @teams.where(division: "B2").each do |t| %>
+        <% @teams.where(division: "B_West").each do |t| %>
           <li><%= link_to "#{t.name}", "#{t.url}", target:'_blank', class:"link" %></li>
         <% end %>
       </ul>
