@@ -16,8 +16,7 @@
     </div>
 
     <div class="field">
-      <%= f.label :division %>
-      <%= f.text_field :division %>
+      <%= f.select :division, options_for_select(["Premier", "A", "B West", "B East", "C"]) %>
     </div>
 
     <div class="field">

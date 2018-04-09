@@ -160,7 +160,11 @@ h5 {
 
 .team-section {
   float: left;
-  width: 25%;
+  width: 20%;
+}
+
+#team-header {
+  width: 150px;
 }
 
 .divider {
@@ -215,4 +219,10 @@ h5 {
 
 .card .card-content {
   text-align: left !important;
+}
+
+select {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
