@@ -14,6 +14,7 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find(params[:id])
+    @bar = Bar.find_by(id: @team.bar_id)
   end
 
   def index

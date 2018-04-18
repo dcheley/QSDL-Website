@@ -1,0 +1,11 @@
+<%= @team.name %>
+<%= image_tag @team.avatar.url(:medium) %>
+
+<%= @team.division %>
+<%= link_to @team.url, target: '_blank', class:'link' do %>
+  Stats<i class="material-icons" id="footer-icon">launch</i>
+<% end %>
+
+<%= image_tag @bar.avatar.url(:medium) %>
+<%= @bar.name %>
+<%= @bar.address %>

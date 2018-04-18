@@ -11,8 +11,8 @@
   <% end %>
 
     <div class="field">
-      <%= f.label :category %>
-      <%= f.text_field :category, required: true %>
+      <%= f.label :Category %>
+      <%= f.select :category, options_for_select(["Captains", "Players", "Tournaments"]) %>
     </div>
 
     <div class="field">
