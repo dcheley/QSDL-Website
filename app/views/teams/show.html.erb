@@ -1,11 +1,22 @@
-<%= @team.name %>
-<%= image_tag @team.avatar.url(:medium) %>
+<div class="container" style="text-align: center;">
+  <div style="text-align: left; display: inline-block;">
+    <!-- Team's Info -->
+    <h5><%= @team.name %></h5>
+    <p><%= image_tag @team.avatar.url(:medium) %></p>
+    <% if !@team.url.empty? %>
+      <p>
+        <%= link_to @team.url, target: '_blank', class:'link' do %>
+          Stats<i class="material-icons" id="footer-icon">launch</i>
+        <% end %>
+      </p>
+    <% else %>
+      <p>N/A</p>
+    <% end %>
+    <p>Division: <%= @team.division %></p>
 
-<%= @team.division %>
-<%= link_to @team.url, target: '_blank', class:'link' do %>
-  Stats<i class="material-icons" id="footer-icon">launch</i>
-<% end %>
-
-<%= image_tag @bar.avatar.url(:medium) %>
-<%= @bar.name %>
-<%= @bar.address %>
+    <!-- Team's Bar Info -->
+    <%= image_tag @bar.avatar.url(:medium) %>
+    <p><%= @bar.name %></p>
+    <p><%= @bar.address %></p>
+  </div>
+</div>
