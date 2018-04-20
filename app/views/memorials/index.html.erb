@@ -1,6 +1,7 @@
 <div class="container">
+  <h5 style="text-align: center;">In Memorium</h5>
   <% @memorials.each do |m| %>
-    <p><%= m.avatar %></p>
+    <p><%= image_tag m.avatar.url(:medium) %></p>
     <p><%= m.name %></p>
     <p><%= m.bio %></p>
   <% end %>
