@@ -54,14 +54,10 @@ ActiveRecord::Schema.define(version: 20180418181506) do
   create_table "teams", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "division"
     t.integer  "bar_id"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

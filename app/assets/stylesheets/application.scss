@@ -179,6 +179,10 @@ h5 {
   background-color: #b71c1c !important;
 }
 
+.error-list {
+  color: red;
+}
+
 .contacts {
   margin-top: 2.5px;
   margin-bottom: 0px;
@@ -225,6 +229,13 @@ select {
   display: block;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.third {
+  float: left;
+  width: 33%;
+  text-align: left;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 524px) {

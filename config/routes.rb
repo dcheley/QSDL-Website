@@ -17,4 +17,8 @@ Rails.application.routes.draw do
   resources :teams, only: [:show, :index, :edit, :update, :new, :create, :destroy]
   resources :bars, only: [:index, :edit, :update, :new, :create, :destroy]
   resources :news, only: [:edit, :update, :new, :create, :destroy]
+
+  resources :teams do
+    resources :posts, only: [:create]
+  end
 end

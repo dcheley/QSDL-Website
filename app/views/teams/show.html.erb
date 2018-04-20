@@ -1,8 +1,17 @@
 <div class="container" style="text-align: center;">
-  <div style="text-align: left; display: inline-block;">
+  <div class='third'>
     <!-- Team's Info -->
-    <h5><%= @team.name %></h5>
-    <p><%= image_tag @team.avatar.url(:medium) %></p>
+    <h4 style="font-weight: bold;"><%= @team.name %></h4>
+
+    <!-- Team's Bar Info -->
+    <h5>@<%= @bar.name %></h5>
+    <%= image_tag @bar.avatar.url(:medium) %>
+    <p><%= @bar.address %></p>
+  </div>
+
+  <div class='third'>
+    <!-- Team Info & Posts -->
+    <h5>About</h5>
     <% if !@team.url.empty? %>
       <p>
         <%= link_to @team.url, target: '_blank', class:'link' do %>
@@ -14,9 +23,54 @@
     <% end %>
     <p>Division: <%= @team.division %></p>
 
-    <!-- Team's Bar Info -->
-    <%= image_tag @bar.avatar.url(:medium) %>
-    <p><%= @bar.name %></p>
-    <p><%= @bar.address %></p>
+    <h5>Posts</h5>
+    <% @posts.each do |post| %>
+      <p><%= post.title %></p>
+      <p><%= post.author %></p>
+      <p><%= post.comment %></p>
+      <p><%= post.avatar %></p>
+    <% end %>
+  </div>
+
+  <div class='third'>
+    <!-- Posts Form -->
+    <h5>Post A Comment</h5>
+
+    <%= form_for([@team, @post]) do |f| %>
+      <% if @post.errors.any? %>
+        <h5 class="error-header"><%= pluralize(@post.errors.count, "error") %> occurred!</h5>
+
+        <ul class="error-list">
+          <% @post.errors.full_messages.each do |msg| %>
+            <li class="error-msg"><%= msg %></li>
+          <% end %>
+        </ul>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="field">
+        <%= f.label :author %>
+        <%= f.text_field :author %>
+      </div>
+
+      <div class="field">
+        <%= f.label :comment %>
+        <%= f.text_area :comment, placeholder: '500 char max' %>
+      </div>
+
+      <div class="field">
+        <%= f.file_field :avatar %>
+      </div></br>
+
+      <%= f.hidden_field :team_id, value: @team.id %>
+
+      <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
+        <%= f.submit %>
+      </button></br></br>
+    <% end %>
   </div>
 </div>
