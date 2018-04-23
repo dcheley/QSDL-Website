@@ -5,35 +5,4 @@
     <p><%= m.name %></p>
     <p><%= m.bio %></p>
   <% end %>
-
-  <%= form_for(@memorial) do |f| %>
-    <% if @memorial.errors.any? %>
-      <div id="error_explanation">
-        <h5><%= pluralize(@memorial.errors.count, "error") %> prohibited change!</h5>
-        <ul>
-        <% @memorial.errors.full_messages.each do |msg| %>
-          <li class="error"><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.file_field :avatar %>
-    </div></br>
-
-    <div class="field">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </div>
-
-    <div class="field">
-      <%= f.label :bio %>
-      <%= f.text_field :bio %>
-    </div>
-
-    <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
-      <%= f.submit %>
-    </button></br></br>
-  <% end %>
 </div>

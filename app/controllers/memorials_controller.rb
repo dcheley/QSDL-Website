@@ -1,45 +1,43 @@
 class MemorialsController < ApplicationController
+  def new
+    @memorial = Memorial.new
+  end
+
   def create
     @memorial = Memorial.new(memorial_params)
-    @memorials = Memorial.all
-    respond_to do |format|
-      if @memorial.save
-        format.html { redirect_to memorials_url, notice:'Memorial posted' }
-        format.json { render json: @memorial, status: :created, location: @memorial }
-      else
-        format.html { render :index }
-        format.json { rendor json: @memorial.errors, status: :unprocessable_entity }
-      end
+    if @memorial.save
+      redirect_to :memorium_list, notice:'Memorial posted'
+    else
+      render :new
     end
+  end
+
+  def edit
+    @memorial = Memorial.find(params[:id])
   end
 
   def update
     @memorial = Memorial.new(memorial_params)
-    @memorials = Memorial.all
-    respond_to do |format|
-      if @memorial.update_attributes(memorial_params)
-        format.html { redirect_to memorials_url, notice:'Memorial details updated' }
-        format.json { render json: @memorial, status: :created, location: @memorial }
-      else
-        format.html { render :index }
-        format.json { rendor json: @memorial.errors, status: :unprocessable_entity }
-      end
+    if @memorial.update_attributes(memorial_params)
+      redirect_to :memorium_list, notice:'Memorial details updated' 
+    else
+      render :edit
     end
   end
 
   def destroy
     @memorial = Memorial.find_by(params[:id])
-    @memorials = Memorial.all
-    respond_to do |format|
-      @memorial.destroy
-      format.html { redirect_to memorials_url, notice:'Memorial deleted' }
-      format.json { render json: @memorial, status: :created, location: @memorial }
-    end
+    @memorial.destroy
+    redirect_to :memorium_list, notice:"#{@memorial.name}'s memorial deleted"
   end
 
   def index
     @memorial = Memorial.new
-    @memorials = Memorial.all
+    @memorials = Memorial.all.order("updated_at DESC")
+  end
+
+  def memorium_list
+    @memorial = Memorial.all.order("updated_at DESC")
   end
 
   private

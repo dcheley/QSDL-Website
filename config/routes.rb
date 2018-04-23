@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/teams/team_list" => "teams#team_list", as: :team_list
   get "/bars/bar_list" => "bars#bar_list", as: :bar_list
   get "/news/news_list" => "news#news_list", as: :news_list
+  get "/memorials/memorium_list" => "memorials#memorium_list", as: :memorium_list
   get "/news/captains" => "news#captains", as: :captain_news
   get "/news/players" => "news#players", as: :player_news
   get "/news/tournaments" => "news#tournaments", as: :tournament_news
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
   resources :teams, only: [:show, :index, :edit, :update, :new, :create, :destroy]
   resources :bars, only: [:index, :edit, :update, :new, :create, :destroy]
   resources :news, only: [:edit, :update, :new, :create, :destroy]
-  resources :memorials, only: [:index, :create, :update, :destroy]
+  resources :memorials, only: [:index, :new, :create, :edit, :update, :destroy]
 
   resources :teams do
     resources :posts, only: [:create]
