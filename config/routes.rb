@@ -13,12 +13,12 @@ Rails.application.routes.draw do
   get "/news/players" => "news#players", as: :player_news
   get "/news/tournaments" => "news#tournaments", as: :tournament_news
 
-
+  resources :teams
   resources :users, only: [:edit, :update]
-  resources :teams, only: [:show, :index, :edit, :update, :new, :create, :destroy]
-  resources :bars, only: [:index, :edit, :update, :new, :create, :destroy]
+  resources :bars, only: [:new, :create, :edit, :update, :destroy, :index]
   resources :news, only: [:edit, :update, :new, :create, :destroy]
-  resources :memorials, only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :merchandise, only: [:new, :create, :edit, :update, :destroy, :index]
+  resources :memorials, only: [:new, :create, :edit, :update, :destroy, :index]
   resources :posts, only: [:edit, :update, :destroy]
 
   resources :teams do
