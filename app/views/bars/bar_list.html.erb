@@ -13,7 +13,7 @@
             <li class="backend-list"><%= link_to "#{b.name}", "/bars/#{b.id}/edit", class:"link" %></li>
             <p><%= image_tag b.avatar.url(:medium) %></p>
             <p><b>Updated:</b> <%= b.updated_at.strftime("%a, %B %d, %Y") %></p>
-            <%= button_to "Delete", {controller: :bars, action: 'destroy', id: b.id }, method: :delete, data: {confirm: "Are you sure?"}, class:"btn red darken-3 waves-effect waves-light" %></br>
+            <%= button_to "Delete", { controller: :bars, action: 'destroy', id: b.id }, method: :delete, data: { confirm: "Are you sure?" }, class:"btn red darken-3 waves-effect waves-light" %></br>
             <li class="divider"></li>
           <% end %>
         <% end %>
