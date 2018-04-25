@@ -1,18 +1,43 @@
 class PostsController < ApplicationController
+
   def create
-    @team = Team.find_by(id: params[:team_id])
     @post = Post.new(post_params)
-    @bar = Bar.find_by(id: @team.bar_id)
-    @posts = Post.where(team_id: @team.id)
+    @team = Team.find(params[:team_id])
     respond_to do |format|
       if @post.save
-        format.html { redirect_to team_url(@team), notice:"Comment posted" }
+        format.html { redirect_to edit_team_url(@team), notice:"Comment posted" }
         format.json { render json: @team, status: :created, location: @team }
       else
-        format.html { render 'teams/show' }
+        format.html { render "teams/#{@team.id}/edit" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+    @team = Team.find(@post.team_id)
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @team = Team.find(@post.team_id)
+    respond_to do |format|
+      if @post.update_attributes(post_params)
+        format.html { redirect_to edit_team_url(@team), notice:"Comment updated" }
+        format.json { render json: @team, status: :created, location: @team }
+      else
+        format.html { render 'teams/edit' }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @team = Team.find(@post.team_id)
+    @post.destroy
+    redirect_to edit_team_url(@team), notice: "#{@post.title} deleted!"
   end
 
   private

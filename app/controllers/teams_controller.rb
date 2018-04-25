@@ -28,6 +28,8 @@ class TeamsController < ApplicationController
 
   def edit
     @team = Team.find(params[:id])
+    @post = Post.new
+    @posts = Post.where(team_id: @team.id)
   end
 
   def update
