@@ -1,9 +1,8 @@
-<% if current_user %>
 <div class="container">
-  <h5>Edit <%= @memorial.name %>'s Memorium </h5>
-  <%= render 'form' %>
-<% else %>
-<div class="container">
-  <h5>Unauthorized!</h5>
-<% end %>
+  <% if current_user %>
+    <h5>Edit <%= @memorial.name %>'s Memorium </h5>
+    <%= render 'form' %>
+  <% else %>
+    <h5>Unauthorized!</h5>
+  <% end %>
 </div></br>

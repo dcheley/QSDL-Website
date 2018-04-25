@@ -10,23 +10,25 @@
     </div>
   <% end %>
 
-    <div class="field">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </div>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
 
-    <div class="field">
-      <%= f.select :division, options_for_select(["Premier", "A", "B West", "B East", "C"]) %>
-    </div>
+  <div class="field">
+    <%= f.label :division %>
+    <p><%= "#{@team.division}" %></p>
+    <%= f.select :division, options_for_select(["Premier", "A", "B West", "B East", "C"]) %>
+  </div>
 
-    <div class="field">
-      <%= f.label :url %>
-      <%= f.text_field :url %>
-    </div>
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
 
-    <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
-      <%= f.submit %>
-    </button></br></br>
+  <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
+    <%= f.submit %>
+  </button></br></br>
 
-    <%= link_to 'Cancel', :team_list, class:"link" %>
+  <%= link_to 'Cancel', :team_list, class:"link" %>
 <% end %>

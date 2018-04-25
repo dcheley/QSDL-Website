@@ -19,7 +19,7 @@ class MemorialsController < ApplicationController
   def update
     @memorial = Memorial.new(memorial_params)
     if @memorial.update_attributes(memorial_params)
-      redirect_to :memorium_list, notice:'Memorial details updated' 
+      redirect_to :memorium_list, notice:'Memorial details updated'
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class MemorialsController < ApplicationController
   end
 
   def memorium_list
-    @memorial = Memorial.all.order("updated_at DESC")
+    @memorials = Memorial.all.order("updated_at DESC")
   end
 
   private

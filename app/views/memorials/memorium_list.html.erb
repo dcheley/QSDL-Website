@@ -1,1 +1,42 @@
-<%= link_to "ADD MEMORIUM", new_memorial_url, class:"btn blue-grey darken-1 waves-effect waves-light", id:"button" %>
+<div class="container">
+  <% if current_user %>
+    <div class="row">
+      <div class="col s12 m9 l9">
+        <div id="memorials-top" class="section scrollspy">
+          <h5>Manage Memorium Info</h5>
+        </div>
+
+        <%= link_to "ADD MEMORIUM", new_memorial_url, class:"btn blue-grey darken-1 waves-effect waves-light", id:"button" %>
+
+        <% @memorials.each do |m| %>
+          <%= div_for m, id:"#{m}", class:"section scrollspy" do %>
+            <li class="backend-list"><%= link_to "#{m.name}", "/memorials/#{m.id}/edit", class:"link" %></li>
+            <p><%= image_tag m.avatar.url(:medium) %></p>
+            <p><b>Updated:</b> <%= m.updated_at.strftime("%a, %B %d, %Y") %></p>
+            <%= button_to "Delete", { controller: :memorials, action: 'destroy', id: m.id }, method: :delete, data: { confirm: "Are you sure?" }, class:"btn red darken-3 waves-effect waves-light" %></br>
+            <li class="divider"></li>
+          <% end %>
+        <% end %>
+      </div>
+
+      <!-- Loop through memorials to create scrollspy links -->
+      <div class="col hide-on-small-only m3 l3 push right">
+        <ul class="section table-of-contents">
+          <% if !@memorials.empty? %>
+            <p class="center">Content</p>
+          <% end %>
+          <% @memorials.each do |m| %>
+            <li><%= link_to "#{m.name}", "#memorial_#{m.id}" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fixed-action-btn">
+      <%= link_to "TOP", "#memorials-top", class:"btn-floating btn-large blue-grey darken-3 white-text" %>
+    </div>
+
+  <% else %>
+    <h5>Unauthorized!</h5>
+  <% end %>
+</div></br>

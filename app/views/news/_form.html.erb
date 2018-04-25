@@ -10,34 +10,34 @@
     </div>
   <% end %>
 
-    <div class="field">
-      <%= f.label :Category %>
-      <%= f.select :category, options_for_select(["Captains", "Players", "Tournaments"]) %>
-    </div>
+  <div class="field">
+    <%= f.label :Category %>
+    <%= f.select :category, options_for_select(["Captains", "Players", "Tournaments"]) %>
+  </div>
 
-    <div class="field">
-      <%= f.label :title %>
-      <%= f.text_field :title, required: true %>
-    </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true %>
+  </div>
 
-    <div class="field">
-      <%= f.label :paragraph_one %>
-      <%= f.text_area :paragraph_one, required: true %>
-    </div>
+  <div class="field">
+    <%= f.label :paragraph_one %>
+    <%= f.text_area :paragraph_one, required: true %>
+  </div>
 
-    <div class="field">
-      <%= f.label :paragraph_two %>
-      <%= f.text_area :paragraph_two %>
-    </div>
+  <div class="field">
+    <%= f.label :paragraph_two %>
+    <%= f.text_area :paragraph_two %>
+  </div>
 
-    <div class="field">
-      <%= f.label :paragraph_three %>
-      <%= f.text_area :paragraph_three %>
-    </div>
+  <div class="field">
+    <%= f.label :paragraph_three %>
+    <%= f.text_area :paragraph_three %>
+  </div>
 
-    <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
-      <%= f.submit %>
-    </button></br></br>
+  <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
+    <%= f.submit %>
+  </button></br></br>
 
-    <%= link_to 'Cancel', :news_list, class:"link" %>
+  <%= link_to 'Cancel', :news_list, class:"link" %>
 <% end %>
