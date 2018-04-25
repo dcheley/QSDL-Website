@@ -1,8 +1,7 @@
 <div class="container" style="text-align: center;">
-  <div class='third'>
-    <!-- Team's Info -->
-    <h4 style="font-weight: bold;"><%= @team.name %></h4>
+  <h4 style="font-weight: bold;"><%= @team.name %></h4>
 
+  <div class='third'>
     <!-- Team's Bar Info -->
     <h5>@<%= @bar.name %></h5>
     <%= image_tag @bar.avatar.url(:medium) %>
@@ -10,7 +9,7 @@
   </div>
 
   <div class='third'>
-    <!-- Team Info & Posts -->
+    <!-- Team Info -->
     <h5>About</h5>
     <% if !@team.url.empty? %>
       <p>
@@ -22,55 +21,16 @@
       <p>N/A</p>
     <% end %>
     <p>Division: <%= @team.division %></p>
-
-    <h5>Posts</h5>
-    <% @posts.each do |post| %>
-      <p><%= post.title %></p>
-      <p><%= post.author %></p>
-      <p><%= post.comment %></p>
-      <p><%= post.avatar %></p>
-    <% end %>
   </div>
 
   <div class='third'>
-    <!-- Posts Form -->
-    <h5>Post A Comment</h5>
-
-    <%= form_for([@team, @post]) do |f| %>
-      <% if @post.errors.any? %>
-        <h5 class="error-header"><%= pluralize(@post.errors.count, "error") %> occurred!</h5>
-
-        <ul class="error-list">
-          <% @post.errors.full_messages.each do |msg| %>
-            <li class="error-msg"><%= msg %></li>
-          <% end %>
-        </ul>
-      <% end %>
-
-      <div class="field">
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-      </div>
-
-      <div class="field">
-        <%= f.label :author %>
-        <%= f.text_field :author %>
-      </div>
-
-      <div class="field">
-        <%= f.label :comment %>
-        <%= f.text_area :comment, placeholder: '500 char max' %>
-      </div>
-
-      <div class="field">
-        <%= f.file_field :avatar %>
-      </div></br>
-
-      <%= f.hidden_field :team_id, value: @team.id %>
-
-      <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
-        <%= f.submit %>
-      </button></br></br>
+    <!-- Posts -->
+    <h5>Posts</h5>
+    <% @posts.each do |post| %>
+      <p><%= image_tag post.avatar.url(:medium), class:'post-image' %></p>
+      <p><%= post.title %></p>
+      <p><%= post.author %></p>
+      <p><%= post.comment %></p>
     <% end %>
   </div>
 </div>

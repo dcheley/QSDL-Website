@@ -15,7 +15,6 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find(params[:id])
     @bar = Bar.find_by(id: @team.bar_id)
-    @post = Post.new
     @posts = Post.where(team_id: @team.id)
   end
 
