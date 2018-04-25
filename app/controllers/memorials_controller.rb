@@ -17,7 +17,7 @@ class MemorialsController < ApplicationController
   end
 
   def update
-    @memorial = Memorial.new(memorial_params)
+    @memorial = Memorial.find(params[:id])
     if @memorial.update_attributes(memorial_params)
       redirect_to :memorium_list, notice:'Memorial details updated'
     else
@@ -26,7 +26,7 @@ class MemorialsController < ApplicationController
   end
 
   def destroy
-    @memorial = Memorial.find_by(params[:id])
+    @memorial = Memorial.find(params[:id])
     @memorial.destroy
     redirect_to :memorium_list, notice:"#{@memorial.name}'s memorial deleted"
   end
