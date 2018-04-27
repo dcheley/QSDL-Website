@@ -251,6 +251,11 @@ select {
   background-color: #263238;
 }
 
+.left-center-block {
+  display: inline-block;
+  text-align: left;
+}
+
 @media only screen and (max-width: 524px) {
   .card {
     width: auto;
