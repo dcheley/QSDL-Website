@@ -1,7 +1,7 @@
 <div class="container">
   <% if current_user %>
     <h5>Edit <%= @post.title %></h5>
-    
+
     <%= form_for(@post) do |f| %>
       <% if @post.errors.any? %>
         <h5 class="error-header"><%= pluralize(@post.errors.count, "error") %> occurred!</h5>
@@ -35,8 +35,6 @@
       <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
         <%= f.submit %>
       </button></br></br>
-
-      <%= link_to 'Cancel', edit_team_url(@team), class:"link" %>
     <% end %>
 
   <% else %>
