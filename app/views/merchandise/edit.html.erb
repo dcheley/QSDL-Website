@@ -1,0 +1,45 @@
+<div class="container">
+  <% if current_user %>
+    <h5>Edit <%= @merchandise.name %>'s Details</h5>
+    <%= form_for(@merchandise, :url => { :action => "update" }) do |f| %>
+      <% if @merchandise.errors.any? %>
+        <div id="error_explanation">
+          <h5><%= pluralize(@merchandise.errors.count, "error") %> prohibited change!</h5>
+          <ul>
+          <% @merchandise.errors.full_messages.each do |msg| %>
+            <li class="error"><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label "Price $"%>
+        <%= f.number_field :price, step: 0.01 %>
+      </div>
+
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+
+      <div class="field">
+        <%= f.file_field :avatar %>
+      </div></br>
+
+      <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
+        <%= f.submit %>
+      </button></br></br>
+
+      <%= link_to 'Cancel', :merchandise_list, class:"link" %>
+    <% end %>
+
+  <% else %>
+    <h5>Unauthorized!</h5>
+  <% end %>
+</div></br>

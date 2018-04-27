@@ -3,5 +3,5 @@ class Merchandise < ApplicationRecord
 
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   validates :name, :price, presence: true
-  validages :description, length: { maximum: 500 }
+  validates :description, length: { maximum: 500 }
 end
