@@ -158,13 +158,17 @@ h5 {
   font-style: italic;
 }
 
+#team-header {
+  width: 95%;
+}
+
 .team-section {
   float: left;
   width: 20%;
 }
 
-#team-header {
-  width: 150px;
+.team-section ul {
+  width: 95%;
 }
 
 .divider {

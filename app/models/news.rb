@@ -1,6 +1,6 @@
 class News < ApplicationRecord
   validates :title, :paragraph_one, :category, presence: true
-  validages :paragraph_one, :paragraph_two, :paragraph_three, length: { maximum: 500 }
+  validates :paragraph_one, :paragraph_two, :paragraph_three, length: { maximum: 500 }
   validate :valid_category
 
   protected
