@@ -4,7 +4,7 @@
   <div class='third'>
     <!-- Team's Bar Info -->
     <h5>@<%= @bar.name %></h5>
-    <%= image_tag @bar.avatar.url(:medium) %>
+    <%= image_tag @bar.avatar.url(:medium), class:'team-pic' %>
     <p><%= @bar.address %></p>
   </div>
 
@@ -29,7 +29,7 @@
     <% @posts.each do |post| %>
       <p><%= image_tag post.avatar.url(:medium), class:'post-image' %></p>
       <p><%= post.title %></p>
-      <p><%= post.author %></p>
+      <p><b>by:</b> <%= post.author %></p>
       <p><%= post.comment %></p>
     <% end %>
   </div>

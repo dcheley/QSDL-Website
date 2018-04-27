@@ -8,7 +8,7 @@ class PostsController < ApplicationController
         format.html { redirect_to edit_team_url(@team), notice:"Comment posted" }
         format.json { render json: @team, status: :created, location: @team }
       else
-        format.html { render "teams/#{@team.id}/edit" }
+        format.html { render "teams/edit" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
         format.html { redirect_to edit_team_url(@team), notice:"Comment updated" }
         format.json { render json: @team, status: :created, location: @team }
       else
-        format.html { render 'teams/edit' }
+        format.html { render :edit }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end

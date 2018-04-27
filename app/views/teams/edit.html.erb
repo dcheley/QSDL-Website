@@ -48,10 +48,12 @@
     <!-- Edit & delete posts -->
     <h5>Edit <%= @team.name %>'s Posts</h5>
 
-    <% @posts.each do |post| %>
-      <%= link_to "#{post.title}", edit_post_url(post), class:"link" %>
-      <p><%= post.comment %></p>
-      <%= button_to "Delete", { controller: :posts, action: 'destroy', id: post.id }, method: :delete, data: { confirm: "Are you sure?" }, class:"btn red darken-3 waves-effect waves-light" %></br>
+    <% if !@posts.nil? %>
+      <% @posts.each do |post| %>
+        <%= link_to "#{post.title}", edit_post_url(post), class:"link" %>
+        <p><%= post.comment %></p>
+        <%= button_to "Delete", { controller: :posts, action: 'destroy', id: post.id }, method: :delete, data: { confirm: "Are you sure?" }, class:"btn red darken-3 waves-effect waves-light" %></br>
+      <% end %>
     <% end %>
 
   <% else %>
