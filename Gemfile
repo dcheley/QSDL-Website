@@ -35,6 +35,11 @@ gem "paperclip", "> 5.1.0"
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.10'
 
+# Setting versions to avoid vulnerabilities
+gem 'loofah', '~> 2.2.1'
+gem 'rails-html-sanitizer', '~> 1.0.4'
+gem 'sprockets', '~> 3.7.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
