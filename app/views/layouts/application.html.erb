@@ -31,12 +31,12 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="<%= current_page?(root_url) ? 'active-li' : 'nav-li' %>"><a href="/">HOME</a></li>
           <li class="nav-li">
-            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
-              LEAGUE STATS<i class="material-icons right" id="nav-icon">launch</i>
+            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/index.php", target:'_blank' do %>
+              STATISTICS<i class="material-icons right" id="nav-icon">launch</i>
             <% end %>
           </li>
           <li class="<%= current_page?(controller: 'teams') ? 'active-li' : 'nav-li' %>"><a href="/teams">TEAMS</a></li>
-          <li class="<%= current_page?(bars_url) ? 'active-li' : 'nav-li' %>"><a href="/bars">SPONSORED BARS</a></li>
+          <li class="<%= current_page?(bars_url) ? 'active-li' : 'nav-li' %>"><a href="/bars">WHERE WE PLAY</a></li>
           <!-- Dropdown Trigger -->
           <li>
             <a class='dropdown-button blue-grey darken-4' id="nav-dropdown" href='#' data-activates='dropdown5'>
@@ -45,30 +45,30 @@
             </a>
           </li>
           <li class="<%= current_page?(merchandise_index_url) ? 'active-li' : 'nav-li' %>"><a href="/merchandise">STORE</a></li>
-          <li class="<%= current_page?(memorials_url) ? 'active-li' : 'nav-li' %>"><a href="/memorials">MEMORIUM</a></li>
+          <li class="<%= current_page?(memorials_url) ? 'active-li' : 'nav-li' %>"><a href="/memorials">IN MEMORIUM</a></li>
           <li class="<%= current_page?("/pages/contact") ? 'active-li' : 'nav-li' %>"><a href="/pages/contact">CONTACT US</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="/pages/home">HOME</a></li>
           <li class="divider"></li>
           <li>
-            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-standings-full.php", target:'_blank' do %>
-              LEAGUE STATS<i class="material-icons right" id="side-nav-icon">launch</i>
+            <%= link_to "http://www.yourleaguestats.com/darts/qsdl/index.php", target:'_blank' do %>
+              STATISTICS<i class="material-icons right" id="side-nav-icon">launch</i>
             <% end %>
           </li>
           <li class="divider"></li>
           <li><a href="/teams">TEAMS</a></li>
           <li class="divider"></li>
-          <li><a href="/bars">SPONSORED BARS</a></li>
+          <li><a href="/bars">WHERE WE PLAY</a></li>
           <li class="divider"></li>
           <li><p class='side-nav-header'>NEWS:</p></li>
           <li><%= link_to "- Captains", :captain_news %></li>
           <li><%= link_to "- Players", :player_news %></li>
           <li><%= link_to "- Tournaments", :tournament_news %></li>
           <li class="divider"></li>
-          <li><a href="/merchandise">SHOP</a></li>
+          <li><a href="/merchandise">STORE</a></li>
           <li class="divider"></li>
-          <li><a href="/memorials">MEMORIUM</a></li>
+          <li><a href="/memorials">IN MEMORIUM</a></li>
           <li class="divider"></li>
           <li><a href="/pages/contact">CONTACT US</a></li>
           <li class="divider"></li>
@@ -85,7 +85,7 @@
               <li><%= link_to "TEAMS & POSTS", "/teams/team_list" %></li>
               <li><%= link_to "BARS", "/bars/bar_list" %></li>
               <li><%= link_to "MERCHANDISE", "/merchandise/merchandise_list" %></li>
-              <li><%= link_to "MEMORIUM", "/memorials/memorium_list" %></li>
+              <li><%= link_to "IN MEMORIUM", "/memorials/memorium_list" %></li>
               <li><%= link_to "ACCOUNT", "/users/#{session[:user_id]}/edit" %></li>
             </ul>
         </div>
@@ -130,7 +130,7 @@
             <ul class="footer-list">
               <%= link_to image_tag('facebook-logo-button.svg', class: "fb"), "https://www.facebook.com/groups/qsdl.darts", target:'_blank' %>
               <%= link_to image_tag('twitter.svg', class: "twitter"), "https://twitter.com/TorontoDarts", target:'_blank' %>
-              <li><a href="/pages/downloads" class="link">Downloads</a></li>
+              <li><a href="/pages/downloads" class="link">Forms</a></li>
               <li>
                 <%= link_to "http://www.yourleaguestats.com/darts/qsdl", target:'_blank', class:"link" do %>
                   Your League Stats<i class="material-icons" id="footer-icon">launch</i>
