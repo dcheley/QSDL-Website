@@ -1,34 +1,45 @@
-<%= form_for(@team) do |f| %>
-  <% if @team.errors.any? %>
-    <div id="error_explanation">
-      <h5><%= pluralize(@team.errors.count, "error") %> prohibited change!</h5>
-      <ul>
-      <% @team.errors.full_messages.each do |msg| %>
-        <li class="error"><%= msg %></li>
+<div class="container">
+  <% if current_user %>
+    <h5>Edit <%= @post.title %></h5>
+
+    <%= form_for(@post) do |f| %>
+      <% if @post.errors.any? %>
+        <h5 class="error-header"><%= pluralize(@post.errors.count, "error") %> occurred!</h5>
+
+        <ul class="error-list">
+          <% @post.errors.full_messages.each do |msg| %>
+            <li class="error-msg"><%= msg %></li>
+          <% end %>
+        </ul>
       <% end %>
-      </ul>
-    </div>
+
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="field">
+        <%= f.label :author %>
+        <%= f.text_field :author %>
+      </div>
+
+      <div class="field">
+        <%= f.label :comment %>
+        <%= f.text_area :comment, placeholder: '500 char max' %>
+      </div>
+
+      <div class="field">
+        <%= f.file_field :avatar %>
+      </div></br>
+
+      <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
+        <%= f.submit %>
+      </button></br></br>
+    <% end %>
+
+    <%= link_to 'Cancel', edit_team_url(@post.team), class:"link" %>
+
+  <% else %>
+    <h5>Unauthorized!</h5>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :division %>
-    <p><%= "#{@team.division}" %></p>
-    <%= f.select :division, options_for_select(["Premier", "A", "B West", "B East", "C"]) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-  </div>
-
-  <button class="btn blue-grey darken-1 waves-effect waves-light" id="button">
-    <%= f.submit %>
-  </button></br></br>
-
-  <%= link_to 'Cancel', :team_list, class:"link" %>
-<% end %>
+</div></br>

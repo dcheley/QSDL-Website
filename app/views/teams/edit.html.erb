@@ -42,13 +42,12 @@
         <%= f.submit %>
       </button></br></br>
 
-      <%= link_to 'Cancel', edit_team_url(@team), class:"link" %>
+      <%= link_to 'Cancel', :team_list, class:"link" %>
     <% end %>
 
-    <!-- Edit & delete posts -->
-    <h5>Edit <%= @team.name %>'s Posts</h5>
-
     <% if !@posts.nil? %>
+      <!-- Edit & delete posts -->
+      <h5>Edit <%= @team.name %>'s Posts</h5>
       <% @posts.each do |post| %>
         <%= link_to "#{post.title}", edit_post_url(post), class:"link" %>
         <p><%= post.comment %></p>
