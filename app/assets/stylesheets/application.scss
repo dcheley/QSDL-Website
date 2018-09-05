@@ -127,6 +127,7 @@
 
 .footer-item {
   display: inline;
+  vertical-align: super;
 }
 
 #link-icon {
@@ -137,8 +138,14 @@
   text-decoration: underline;
 }
 
-.paragraph {
+.paragraph,
+#intro-paragraph {
   text-align: justify;
+}
+
+#intro-paragraph {
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 nav .brand-logo img {
@@ -258,6 +265,7 @@ select {
 .left-center-block {
   display: inline-block;
   text-align: left;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 524px) {
