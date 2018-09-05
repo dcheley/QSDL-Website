@@ -24,15 +24,16 @@
             </div>
             <div class="form-group">
               <%= label_tag 'body', 'Comments' %>
-              <%= text_area_tag 'body', nil, class: 'form-control', rows: 4, placeholder: 'Additional comments...' %>
+              <%= text_area_tag 'body', nil, class: 'form-control', rows: 4, placeholder: 'Additional comments...', style: 'height: 150px;' %>
             </div>
-            <%= submit_tag nil, class: 'btn btn-default btn-about pull-right' %>
+            <div class="modal-footer">
+              <%= submit_tag nil, class: 'btn btn-default btn-about' %>
+              <a href="#!" class="modal-close red darken-1 btn white-text">Cancel</a>
           <% end %>
+            </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close red darken-1 btn-flat white-text">Cancel</a>
-      </div>
+
     </div>
     <div class="container">
       <div class="col l12 s12" id="intro-paragraph">

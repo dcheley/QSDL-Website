@@ -1,7 +1,9 @@
-//= require jquery
+//= require jquery3
 //= require jquery_ujs
-//= require turbolinks
 //= require materialize
+//= require turbolinks
+//= require_tree .
+
 $(document).on('turbolinks:load', function() {
   $('.button-collapse').sideNav();
   $('.parallax').parallax();
