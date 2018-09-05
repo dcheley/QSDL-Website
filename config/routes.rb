@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get "/news/players" => "news#players", as: :player_news
   get "/news/tournaments" => "news#tournaments", as: :tournament_news
 
+  match '/send_email', to: 'users#send_email', via: 'post'
+
   resources :teams
   resources :users, only: [:edit, :update]
   resources :bars, only: [:new, :create, :edit, :update, :destroy, :index]

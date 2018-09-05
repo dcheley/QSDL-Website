@@ -4,3 +4,6 @@ tmp/*
 application.rb
 application.yml
 /test
+
+# Ignore encrypted secrets key file.
+config/secrets.yml.key

@@ -5,10 +5,30 @@
       <div class="parallax"><%= image_tag('bg.png') %></div>
       <div style="margin-top: 160px;"></div>
       <!-- Create internal form and change link to popup -->
-      <%= link_to "http://www.yourleaguestats.com/darts/qsdl/league-contact.php?type=jl", class: 'parallax-link', target: '_blank' do %>
+      <%= link_to "", class: 'parallax-link' do %>
         JOIN THE LEAGUE<i class="material-icons" id="parallax-icon">launch</i>
       <% end %>
     </div>
+
+    <div class="container-content">
+      <div class="container">
+        <%= form_tag(send_email_path) do %>
+            <div class="form-group">
+              <%= label_tag 'name', 'Name' %>
+              <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Your Name', required: true %>
+            </div>
+           <div class="form-group">
+             <%= label_tag 'email', 'Email' %>
+             <%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Your Email Address', required: true %>
+           </div>
+           <div class="form-group">
+             <%= label_tag 'body', 'Comments' %>
+             <%= text_area_tag 'body', nil, class: 'form-control', rows: 4, placeholder: 'Additional comments...' %>
+           </div>
+           <%= submit_tag nil, class: 'btn btn-default btn-about pull-right' %>
+       <% end %>
+    </div>
+  </div>
     <div class="container">
       <div class="col l12 s12" id="intro-paragraph">
         <h5 class="black-text">Queen Street Dart League</h5>
