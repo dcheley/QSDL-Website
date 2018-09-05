@@ -17,6 +17,7 @@ $(document).ready(function() {
       alignment: 'left', // Displays dropdown with edge aligned to the right of button
       stopPropagation: false // Stops event propagation
     });
+    $('.modal').modal();
     $('.fixed-action-btn').hide();
     $(window).scroll(function() {
       var y_scroll_pos = window.pageYOffset;
