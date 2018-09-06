@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/missing.png"
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:attachment/missing_:style.png"
 
   belongs_to :team
 
