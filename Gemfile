@@ -34,7 +34,8 @@ gem "record_tag_helper", '~> 1.0'
 gem "paperclip", "> 5.1.0"
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.10'
-
+# AWS Bucket for file storage
+gem 'aws-sdk-s3'
 # Setting versions to avoid vulnerabilities
 gem 'loofah', '~> 2.2.1'
 gem 'rails-html-sanitizer', '~> 1.0.4'
